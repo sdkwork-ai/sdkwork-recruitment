@@ -302,8 +302,7 @@ code {
   border: 1px solid var(--line);
   border-radius: 18px;
   background: var(--panel);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(16px);
+
 }
 
 .step-index {
@@ -319,8 +318,8 @@ code {
   color: var(--accent);
 }
 
-.step-index.next,
-.step-state.next {
+.step-index.pending,
+.step-state.pending {
   color: #e6c67d;
 }
 

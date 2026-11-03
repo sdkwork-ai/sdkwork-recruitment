@@ -8,7 +8,7 @@ const deploymentProfile = import.meta.env.VITE_SDKWORK_DEPLOYMENT_PROFILE
 type FoundationStep = {
   readonly title: string;
   readonly body: string;
-  readonly state: 'ready' | 'next';
+  readonly state: 'ready' | 'pending';
 };
 
 const steps: readonly FoundationStep[] = [
@@ -25,7 +25,7 @@ const steps: readonly FoundationStep[] = [
   {
     title: 'First vertical workflow',
     body: 'Add requirements, API contracts, generated SDKs, and package-level feature modules before building product screens.',
-    state: 'next',
+    state: 'pending',
   },
 ];
 
