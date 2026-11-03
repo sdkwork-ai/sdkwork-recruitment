@@ -104,7 +104,7 @@
           "Standard pnpm command surface"
         ],
         "packageIds": [],
-        "publishedAt": "2026-11-03T16:14:14.450Z",
+        "publishedAt": "2026-11-03T16:34:04.328Z",
         "current": true,
         "forceUpdate": false,
         "minSupportedVersion": "0.1.0",
@@ -127,7 +127,7 @@
     "scaffold": {
       "generator": "sdkwork-scaffold",
       "version": "1.2.0",
-      "generatedAt": "2026-11-03T16:14:14.450Z",
+      "generatedAt": "2026-11-03T16:34:04.328Z",
       "architectures": [
         "pc",
         "h5",

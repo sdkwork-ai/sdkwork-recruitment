@@ -1,8 +1,12 @@
+import { useState } from 'react';
+
 import { integratedComponents } from './composition/components';
 
-const surface = 'pad';
+const surface: string = 'pad';
 const surfaceTitle = 'Pad';
 const architectureRoots = [{"id":"pc","title":"PC","suffix":"pc","root":"apps/sdkwork-recruitment-pc","packageName":"sdkwork-recruitment-pc","kind":"web"},{"id":"h5","title":"H5","suffix":"h5","root":"apps/sdkwork-recruitment-h5","packageName":"sdkwork-recruitment-h5","kind":"web"},{"id":"pad","title":"Pad","suffix":"pad","root":"apps/sdkwork-recruitment-pad","packageName":"sdkwork-recruitment-pad","kind":"web"},{"id":"ios","title":"iOS","suffix":"ios-mobile","root":"apps/sdkwork-recruitment-ios-mobile","packageName":"sdkwork-recruitment-ios-mobile","kind":"ios"},{"id":"android","title":"Android","suffix":"android-mobile","root":"apps/sdkwork-recruitment-android-mobile","packageName":"sdkwork-recruitment-android-mobile","kind":"android"},{"id":"harmony","title":"HarmonyOS","suffix":"harmony-mobile","root":"apps/sdkwork-recruitment-harmony-mobile","packageName":"sdkwork-recruitment-harmony-mobile","kind":"harmony"},{"id":"flutter","title":"Flutter","suffix":"flutter-mobile","root":"apps/sdkwork-recruitment-flutter-mobile","packageName":"sdkwork-recruitment-flutter-mobile","kind":"flutter"},{"id":"mini-program","title":"Mini Program","suffix":"mini-program","root":"apps/sdkwork-recruitment-mini-program","packageName":"sdkwork-recruitment-mini-program","kind":"mini-program"}];
+
+type MobileTab = 'overview' | 'surfaces' | 'components';
 const deploymentProfile = import.meta.env.VITE_SDKWORK_DEPLOYMENT_PROFILE
   ?? import.meta.env.MODE;
 
@@ -31,11 +35,13 @@ const steps: readonly FoundationStep[] = [
 ];
 
 export default function App() {
+  const [activeTab, setActiveTab] = useState<MobileTab>('overview');
+  const isMobile = surface === 'h5';
   const linked = integratedComponents.filter((component) => component.supported).length;
   const planned = integratedComponents.length - linked;
 
   return (
-    <div className="scaffold-app" data-surface={surface}>
+    <div className="scaffold-app" data-surface={surface} data-active-tab={activeTab}>
       <aside className="scaffold-rail">
         <a className="scaffold-rail-brand" href="#overview" aria-label="SDKWork Recruitment home">
           R
@@ -59,6 +65,12 @@ export default function App() {
           <code>pnpm dev</code>
         </div>
       </aside>
+
+      <header className="scaffold-mobile-appbar">
+        <span className="scaffold-rail-brand" aria-hidden="true">R</span>
+        <strong>SDKWork Recruitment</strong>
+        <span className="scaffold-surface-chip">{surfaceTitle}</span>
+      </header>
 
       <main className="scaffold-main">
         <header className="scaffold-page-header">
@@ -194,6 +206,38 @@ export default function App() {
           <span>Generated 2026-11-03</span>
         </footer>
       </main>
+
+      {isMobile ? (
+        <nav className="scaffold-bottom-tabs" aria-label="Mobile sections">
+          <button
+            type="button"
+            className="scaffold-bottom-tab"
+            aria-current={activeTab === 'overview' ? 'page' : undefined}
+            onClick={() => setActiveTab('overview')}
+          >
+            <span aria-hidden="true">◫</span>
+            <span>Overview</span>
+          </button>
+          <button
+            type="button"
+            className="scaffold-bottom-tab"
+            aria-current={activeTab === 'surfaces' ? 'page' : undefined}
+            onClick={() => setActiveTab('surfaces')}
+          >
+            <span aria-hidden="true">▤</span>
+            <span>Surfaces</span>
+          </button>
+          <button
+            type="button"
+            className="scaffold-bottom-tab"
+            aria-current={activeTab === 'components' ? 'page' : undefined}
+            onClick={() => setActiveTab('components')}
+          >
+            <span aria-hidden="true">◇</span>
+            <span>Components</span>
+          </button>
+        </nav>
+      ) : null}
     </div>
   );
 }

@@ -23,7 +23,7 @@ apps/sdkwork-recruitment-ios-mobile/
   project.yml
 ```
 
-`App/` is the thin installable target. Feature views, services, and state belong in Swift packages under `packages/sdkwork-recruitment-ios-mobile-<capability>/`.
+`App/` is the thin installable target. The root uses a native SwiftUI `TabView` with `Overview / Surfaces / Components`. Feature views, services, and state belong in Swift packages under `packages/sdkwork-recruitment-ios-mobile-<capability>/`.
 
 ## Commands
 
