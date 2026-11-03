@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "kind": "sdkwork.scaffold.instance",
   "generator": "sdkwork-scaffold",
-  "generatorVersion": "1.1.0",
-  "generatedAt": "2026-11-03T15:40:31.030Z",
+  "generatorVersion": "1.2.0",
+  "generatedAt": "2026-11-03T16:14:14.450Z",
   "application": {
     "code": "recruitment",
     "name": "SDKWork Recruitment",

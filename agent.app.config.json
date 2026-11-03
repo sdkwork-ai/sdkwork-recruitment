@@ -40,7 +40,7 @@
         "width": 1024,
         "height": 1024,
         "format": "PNG",
-        "fileSizeBytes": 38723,
+        "fileSizeBytes": 25482,
         "alphaChannel": false,
         "sortOrder": 0,
         "enabled": true,
@@ -104,7 +104,7 @@
           "Standard pnpm command surface"
         ],
         "packageIds": [],
-        "publishedAt": "2026-11-03T15:40:31.030Z",
+        "publishedAt": "2026-11-03T16:14:14.450Z",
         "current": true,
         "forceUpdate": false,
         "minSupportedVersion": "0.1.0",
@@ -126,8 +126,8 @@
     "deploymentConfig": "etc/sdkwork.deployment.config.json",
     "scaffold": {
       "generator": "sdkwork-scaffold",
-      "version": "1.1.0",
-      "generatedAt": "2026-11-03T15:40:31.030Z",
+      "version": "1.2.0",
+      "generatedAt": "2026-11-03T16:14:14.450Z",
       "architectures": [
         "pc",
         "h5",
