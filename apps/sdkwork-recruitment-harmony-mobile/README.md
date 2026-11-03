@@ -24,7 +24,7 @@ apps/sdkwork-recruitment-harmony-mobile/
   oh-package.json5
 ```
 
-`entry/` stays thin: ability, root page, and composition only. The root uses ArkUI `Tabs` with `BarPosition.End` and `Overview / Surfaces / Components`. Business pages belong in ArkTS packages under `packages/sdkwork-recruitment-harmony-mobile-<capability>/`.
+`entry/` stays thin: ability, root page, and composition only. The root uses ArkUI `Tabs` with `BarPosition.End` and `Overview / Surfaces / Components / Me`. Business pages belong in ArkTS packages under `packages/sdkwork-recruitment-harmony-mobile-<capability>/`.
 
 ## Commands
 

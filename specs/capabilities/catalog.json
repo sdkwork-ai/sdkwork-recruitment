@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.scaffold.capability-catalog",
+  "application": "sdkwork-recruitment",
+  "capabilities": [
+    {
+      "id": "foundation",
+      "title": "Application foundation",
+      "version": "1.0.0",
+      "category": "platform",
+      "states": [
+        "ready"
+      ]
+    },
+    {
+      "id": "surfaces",
+      "title": "Architecture surfaces",
+      "version": "1.0.0",
+      "category": "platform",
+      "architectures": [
+        "pc",
+        "h5",
+        "pad",
+        "ios",
+        "android",
+        "harmony",
+        "flutter",
+        "mini-program"
+      ]
+    },
+    {
+      "id": "components",
+      "title": "Component composition",
+      "version": "1.0.0",
+      "category": "platform",
+      "selected": [
+        "iam",
+        "appbase",
+        "rtc",
+        "im",
+        "agents",
+        "order",
+        "drive",
+        "payment",
+        "comments",
+        "messaging"
+      ]
+    },
+    {
+      "id": "me",
+      "title": "My account",
+      "version": "1.0.0",
+      "category": "identity",
+      "requires": [
+        "iam"
+      ],
+      "selected": true,
+      "contract": {
+        "session": "auth.sessions.current",
+        "profile": "iam.users.current",
+        "signOut": "auth.sessions.current.delete"
+      },
+      "projections": {
+        "web": "src/account/iam-account.ts",
+        "mobile": "Overview / Surfaces / Components / Me"
+      }
+    }
+  ]
+}

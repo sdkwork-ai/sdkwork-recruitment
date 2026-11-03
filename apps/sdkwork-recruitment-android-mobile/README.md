@@ -24,7 +24,7 @@ apps/sdkwork-recruitment-android-mobile/
   settings.gradle.kts
 ```
 
-`app/` stays thin: application, activity, composition, and bootstrap only. The root uses a Material 3 `NavigationBar` with `Overview / Surfaces / Components`. Business screens belong in Android library modules under `packages/sdkwork-recruitment-android-mobile-<capability>/`.
+`app/` stays thin: application, activity, composition, and bootstrap only. The root uses a Material 3 `NavigationBar` with `Overview / Surfaces / Components / Me`. Business screens belong in Android library modules under `packages/sdkwork-recruitment-android-mobile-<capability>/`.
 
 ## Commands
 
