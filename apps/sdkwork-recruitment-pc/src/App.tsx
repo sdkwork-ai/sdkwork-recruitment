@@ -18,8 +18,8 @@ const steps: readonly FoundationStep[] = [
     state: 'ready',
   },
   {
-    title: 'Browser surfaces',
-    body: 'PC and H5 shells share one product identity while keeping independent architecture roots and package manifests.',
+    title: 'Architecture surfaces',
+    body: 'Web, tablet, native, Flutter, and mini-program roots share one product identity while keeping independent architecture roots and package manifests.',
     state: 'ready',
   },
   {
