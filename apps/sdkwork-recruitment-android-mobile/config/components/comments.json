@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.component.integration",
+  "component": "comments",
+  "title": "Comments",
+  "enabled": true,
+  "sdk": {
+    "family": "sdkwork-comments-app-sdk",
+    "apiSurface": null,
+    "credentialMode": null,
+    "package": null
+  },
+  "permissions": [],
+  "config": {
+    "threading": true,
+    "pageSize": 20
+  },
+  "runtime": {
+    "architecture": "android",
+    "mode": "unsupported-language",
+    "supported": false,
+    "reason": "sdkwork-comments-app-sdk has no kotlin/java output"
+  }
+}

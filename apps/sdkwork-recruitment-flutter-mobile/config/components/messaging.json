@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.component.integration",
+  "component": "messaging",
+  "title": "Messaging",
+  "enabled": true,
+  "sdk": {
+    "family": "sdkwork-messaging-app-sdk",
+    "apiSurface": null,
+    "credentialMode": null,
+    "package": null
+  },
+  "permissions": [],
+  "config": {
+    "channels": [
+      "in-app",
+      "push"
+    ]
+  },
+  "runtime": {
+    "architecture": "flutter",
+    "mode": "unsupported-language",
+    "supported": false,
+    "reason": "sdkwork-messaging-app-sdk has no flutter/dart output"
+  }
+}

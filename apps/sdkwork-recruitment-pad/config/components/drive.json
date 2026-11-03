@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.component.integration",
+  "component": "drive",
+  "title": "Drive & Upload",
+  "enabled": true,
+  "sdk": {
+    "family": "sdkwork-drive-app-sdk",
+    "apiSurface": "app",
+    "credentialMode": "authenticated-app-api",
+    "package": "@sdkwork/drive-app-sdk"
+  },
+  "permissions": [],
+  "config": {
+    "uploadProfile": "default",
+    "maxInlineUploadBytes": 10485760
+  },
+  "runtime": {
+    "architecture": "pad",
+    "mode": "linked",
+    "supported": true,
+    "reason": null
+  }
+}

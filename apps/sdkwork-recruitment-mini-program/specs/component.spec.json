@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.component.spec",
+  "component": {
+    "name": "sdkwork-recruitment-mini-program",
+    "displayName": "SDKWork Recruitment Mini Program",
+    "version": "0.1.0",
+    "type": "mini-program-app",
+    "root": "apps/sdkwork-recruitment-mini-program",
+    "domain": "recruitment",
+    "capability": "recruitment",
+    "surface": "app",
+    "languages": [
+      "typescript"
+    ],
+    "generated": false,
+    "manifests": [
+      "package.json",
+      "project.config.json"
+    ]
+  },
+  "canonicalSpecs": [
+    {
+      "file": "APPLICATION_SPEC.md",
+      "path": "../../../sdkwork-specs/APPLICATION_SPEC.md",
+      "purpose": "Application composition boundaries."
+    },
+    {
+      "file": "MINI_PROGRAM_APP_ARCHITECTURE_SPEC.md",
+      "path": "../../../sdkwork-specs/MINI_PROGRAM_APP_ARCHITECTURE_SPEC.md",
+      "purpose": "Mini-program application root architecture."
+    },
+    {
+      "file": "APP_MINI_PROGRAM_UI_SPEC.md",
+      "path": "../../../sdkwork-specs/APP_MINI_PROGRAM_UI_SPEC.md",
+      "purpose": "Mini-program UI package rules."
+    },
+    {
+      "file": "CODE_STYLE_SPEC.md",
+      "path": "../../../sdkwork-specs/CODE_STYLE_SPEC.md",
+      "purpose": "Authored code structure."
+    },
+    {
+      "file": "NAMING_SPEC.md",
+      "path": "../../../sdkwork-specs/NAMING_SPEC.md",
+      "purpose": "Canonical naming."
+    },
+    {
+      "file": "TYPESCRIPT_CODE_SPEC.md",
+      "path": "../../../sdkwork-specs/TYPESCRIPT_CODE_SPEC.md",
+      "purpose": "TypeScript source rules."
+    }
+  ],
+  "contracts": {
+    "layerRole": "runtime-composition",
+    "publicExports": [
+      "."
+    ],
+    "providedPorts": [],
+    "requiredPorts": [],
+    "runtimeEntrypoints": [
+      "src/app.ts"
+    ],
+    "routeManifest": null,
+    "sdkClients": [],
+    "sdkDependencies": [
+      {
+        "workspace": "sdkwork-iam-app-sdk",
+        "permissionModuleId": "iam-kernel",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/iam-app-sdk",
+        "architecture": "mini-program"
+      },
+      {
+        "workspace": "sdkwork-im-app-sdk",
+        "permissionModuleId": "im",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/im-app-sdk",
+        "architecture": "mini-program"
+      },
+      {
+        "workspace": "sdkwork-agents-app-sdk",
+        "permissionModuleId": "agents",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/agents-app-sdk",
+        "architecture": "mini-program"
+      },
+      {
+        "workspace": "sdkwork-order-app-sdk",
+        "permissionModuleId": "commerce",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/order-app-sdk",
+        "architecture": "mini-program"
+      },
+      {
+        "workspace": "sdkwork-drive-app-sdk",
+        "permissionModuleId": "drive",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/drive-app-sdk",
+        "architecture": "mini-program"
+      },
+      {
+        "workspace": "sdkwork-payment-app-sdk",
+        "permissionModuleId": "payment",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/payment-app-sdk",
+        "architecture": "mini-program"
+      },
+      {
+        "workspace": "sdkwork-comments-app-sdk",
+        "permissionModuleId": "comments",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/comments-app-sdk",
+        "architecture": "mini-program"
+      },
+      {
+        "workspace": "sdkwork-messaging-app-sdk",
+        "permissionModuleId": "messaging",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/messaging-app-sdk",
+        "architecture": "mini-program"
+      }
+    ],
+    "permissionComposition": {},
+    "dependencyApiExports": [],
+    "dependencyApiSurfaces": [],
+    "events": [],
+    "configKeys": [
+      "project.config.json",
+      "config/components"
+    ]
+  },
+  "verification": {
+    "commands": [
+      "pnpm --dir apps/sdkwork-recruitment-mini-program typecheck"
+    ]
+  }
+}

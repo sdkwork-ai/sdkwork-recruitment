@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.component.integration",
+  "component": "comments",
+  "title": "Comments",
+  "enabled": true,
+  "sdk": {
+    "family": "sdkwork-comments-app-sdk",
+    "apiSurface": "app",
+    "credentialMode": "authenticated-app-api",
+    "package": "@sdkwork/comments-app-sdk"
+  },
+  "permissions": [],
+  "config": {
+    "threading": true,
+    "pageSize": 20
+  },
+  "runtime": {
+    "architecture": "pc",
+    "mode": "linked",
+    "supported": true,
+    "reason": null
+  }
+}

@@ -15,6 +15,16 @@
     "clean": "pnpm --dir ../.. clean"
   },
   "dependencies": {
+    "@sdkwork/agents-app-sdk": "workspace:*",
+    "@sdkwork/comments-app-sdk": "workspace:*",
+    "@sdkwork/drive-app-sdk": "workspace:*",
+    "@sdkwork/iam-app-sdk": "workspace:*",
+    "@sdkwork/im-app-sdk": "workspace:*",
+    "@sdkwork/messaging-app-sdk": "workspace:*",
+    "@sdkwork/order-app-sdk": "workspace:*",
+    "@sdkwork/payment-app-sdk": "workspace:*",
+    "@sdkwork/sdk-common": "workspace:*",
+    "@sdkwork/utils": "workspace:*",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
@@ -27,7 +37,10 @@
     "vite": "^7.1.0"
   },
   "sdkwork": {
+    "kind": "web",
     "surface": "pc",
+    "architecture": "pc",
+    "componentType": "pc-app",
     "devPort": 4173,
     "architectureSpec": "APP_PC_ARCHITECTURE_SPEC.md"
   }

@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.scaffold.architecture-integration",
+  "architecture": "mini-program",
+  "title": "Mini Program",
+  "kindName": "mini-program",
+  "language": "typescript",
+  "runtime": {
+    "family": "mini-program",
+    "framework": "weixin-mini-program",
+    "defaultPlatform": "MP_WEIXIN",
+    "defaultArchitecture": "universal"
+  },
+  "components": [
+    {
+      "id": "iam",
+      "title": "IAM & Session",
+      "supported": true,
+      "mode": "linked",
+      "language": "typescript",
+      "packageName": "@sdkwork/iam-app-sdk",
+      "sdkPath": "../sdkwork-iam/sdks/sdkwork-iam-app-sdk/sdkwork-iam-app-sdk-typescript",
+      "reason": null
+    },
+    {
+      "id": "appbase",
+      "title": "Appbase Foundation",
+      "supported": false,
+      "mode": "runtime-unavailable",
+      "language": null,
+      "packageName": null,
+      "sdkPath": null,
+      "reason": "No runtime package is declared for mini-program"
+    },
+    {
+      "id": "rtc",
+      "title": "RTC",
+      "supported": false,
+      "mode": "declared",
+      "language": "typescript",
+      "packageName": "@sdkwork/rtc-app-sdk",
+      "sdkPath": "../sdkwork-rtc/sdks/sdkwork-rtc-app-sdk/sdkwork-rtc-app-sdk-typescript",
+      "reason": "generated TypeScript transport dist is missing; build the dependency SDK before linking"
+    },
+    {
+      "id": "im",
+      "title": "IM & Messaging",
+      "supported": true,
+      "mode": "linked",
+      "language": "typescript",
+      "packageName": "@sdkwork/im-app-sdk",
+      "sdkPath": "../sdkwork-im/sdks/sdkwork-im-app-sdk/sdkwork-im-app-sdk-typescript",
+      "reason": null
+    },
+    {
+      "id": "agents",
+      "title": "Agents",
+      "supported": true,
+      "mode": "linked",
+      "language": "typescript",
+      "packageName": "@sdkwork/agents-app-sdk",
+      "sdkPath": "../sdkwork-agents/sdks/sdkwork-agents-app-sdk/sdkwork-agents-app-sdk-typescript",
+      "reason": null
+    },
+    {
+      "id": "order",
+      "title": "Order & Checkout",
+      "supported": true,
+      "mode": "linked",
+      "language": "typescript",
+      "packageName": "@sdkwork/order-app-sdk",
+      "sdkPath": "../sdkwork-order/sdks/sdkwork-order-app-sdk/sdkwork-order-app-sdk-typescript",
+      "reason": null
+    },
+    {
+      "id": "drive",
+      "title": "Drive & Upload",
+      "supported": true,
+      "mode": "linked",
+      "language": "typescript",
+      "packageName": "@sdkwork/drive-app-sdk",
+      "sdkPath": "../sdkwork-drive/sdks/sdkwork-drive-app-sdk/sdkwork-drive-app-sdk-typescript",
+      "reason": null
+    },
+    {
+      "id": "payment",
+      "title": "Payment",
+      "supported": true,
+      "mode": "linked",
+      "language": "typescript",
+      "packageName": "@sdkwork/payment-app-sdk",
+      "sdkPath": "../sdkwork-payment/sdks/sdkwork-payment-app-sdk/sdkwork-payment-app-sdk-typescript",
+      "reason": null
+    },
+    {
+      "id": "comments",
+      "title": "Comments",
+      "supported": true,
+      "mode": "linked",
+      "language": "typescript",
+      "packageName": "@sdkwork/comments-app-sdk",
+      "sdkPath": "../sdkwork-comments/sdks/sdkwork-comments-app-sdk/sdkwork-comments-app-sdk-typescript",
+      "reason": null
+    },
+    {
+      "id": "messaging",
+      "title": "Messaging",
+      "supported": true,
+      "mode": "linked",
+      "language": "typescript",
+      "packageName": "@sdkwork/messaging-app-sdk",
+      "sdkPath": "../sdkwork-messaging/sdks/sdkwork-messaging-app-sdk/sdkwork-messaging-app-sdk-typescript",
+      "reason": null
+    }
+  ]
+}

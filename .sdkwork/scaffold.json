@@ -2,17 +2,46 @@
   "schemaVersion": 1,
   "kind": "sdkwork.scaffold.instance",
   "generator": "sdkwork-scaffold",
-  "generatorVersion": "1.0.0",
-  "generatedAt": "2026-11-03T14:33:55.696Z",
+  "generatorVersion": "1.1.0",
+  "generatedAt": "2026-11-03T15:33:53.796Z",
   "application": {
     "code": "recruitment",
     "name": "SDKWork Recruitment",
     "owner": "sdkwork-platform",
     "domain": "recruitment",
     "appType": "APP_REACT",
+    "architectures": [
+      "pc",
+      "h5",
+      "pad",
+      "ios",
+      "android",
+      "harmony",
+      "flutter",
+      "mini-program"
+    ],
     "surfaces": [
       "pc",
-      "h5"
-    ]
+      "h5",
+      "pad",
+      "ios",
+      "android",
+      "harmony",
+      "flutter",
+      "mini-program"
+    ],
+    "components": [
+      "iam",
+      "appbase",
+      "rtc",
+      "im",
+      "agents",
+      "order",
+      "drive",
+      "payment",
+      "comments",
+      "messaging"
+    ],
+    "componentMode": "linked"
   }
 }

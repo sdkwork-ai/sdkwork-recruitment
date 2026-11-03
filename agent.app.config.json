@@ -64,11 +64,19 @@
     "status": "DRAFT",
     "platforms": [
       "WEB",
-      "H5"
+      "H5",
+      "APP_IOS",
+      "APP_ANDROID",
+      "APP_HARMONY",
+      "MP_WEIXIN"
     ],
     "installPlatforms": [
       "WEB",
-      "H5"
+      "H5",
+      "APP_IOS",
+      "APP_ANDROID",
+      "APP_HARMONY",
+      "MP_WEIXIN"
     ],
     "stores": []
   },
@@ -96,7 +104,7 @@
           "Standard pnpm command surface"
         ],
         "packageIds": [],
-        "publishedAt": "2026-11-03T14:33:55.696Z",
+        "publishedAt": "2026-11-03T15:33:53.796Z",
         "current": true,
         "forceUpdate": false,
         "minSupportedVersion": "0.1.0",
@@ -118,12 +126,31 @@
     "deploymentConfig": "etc/sdkwork.deployment.config.json",
     "scaffold": {
       "generator": "sdkwork-scaffold",
-      "version": "1.0.0",
-      "generatedAt": "2026-11-03T14:33:55.696Z",
-      "surfaces": [
+      "version": "1.1.0",
+      "generatedAt": "2026-11-03T15:33:53.796Z",
+      "architectures": [
         "pc",
-        "h5"
-      ]
+        "h5",
+        "pad",
+        "ios",
+        "android",
+        "harmony",
+        "flutter",
+        "mini-program"
+      ],
+      "components": [
+        "iam",
+        "appbase",
+        "rtc",
+        "im",
+        "agents",
+        "order",
+        "drive",
+        "payment",
+        "comments",
+        "messaging"
+      ],
+      "primaryArchitecture": "pc"
     }
   }
 }

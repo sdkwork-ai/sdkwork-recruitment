@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.component.integration",
+  "component": "messaging",
+  "title": "Messaging",
+  "enabled": true,
+  "sdk": {
+    "family": "sdkwork-messaging-app-sdk",
+    "apiSurface": "app",
+    "credentialMode": "authenticated-app-api",
+    "package": "@sdkwork/messaging-app-sdk"
+  },
+  "permissions": [],
+  "config": {
+    "channels": [
+      "in-app",
+      "push"
+    ]
+  },
+  "runtime": {
+    "architecture": "pc",
+    "mode": "linked",
+    "supported": true,
+    "reason": null
+  }
+}

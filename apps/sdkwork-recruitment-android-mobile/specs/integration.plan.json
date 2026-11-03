@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.scaffold.architecture-integration",
+  "architecture": "android",
+  "title": "Android",
+  "kindName": "android",
+  "language": "kotlin",
+  "runtime": {
+    "family": "mobile",
+    "framework": "android-native",
+    "defaultPlatform": "APP_ANDROID",
+    "defaultArchitecture": "arm64"
+  },
+  "components": [
+    {
+      "id": "iam",
+      "title": "IAM & Session",
+      "supported": true,
+      "mode": "linked",
+      "language": "kotlin",
+      "packageName": "com.sdkwork:sdkwork-iam-app-sdk",
+      "sdkPath": "../sdkwork-iam/sdks/sdkwork-iam-app-sdk/sdkwork-iam-app-sdk-kotlin/generated/server-openapi",
+      "reason": null
+    },
+    {
+      "id": "appbase",
+      "title": "Appbase Foundation",
+      "supported": false,
+      "mode": "runtime-unavailable",
+      "language": null,
+      "packageName": null,
+      "sdkPath": null,
+      "reason": "No runtime package is declared for android"
+    },
+    {
+      "id": "rtc",
+      "title": "RTC",
+      "supported": false,
+      "mode": "declared",
+      "language": "java",
+      "packageName": "com.sdkwork:sdkwork-rtc-app-sdk",
+      "sdkPath": "../sdkwork-rtc/sdks/sdkwork-rtc-app-sdk/sdkwork-rtc-app-sdk-java",
+      "reason": "SDK package path does not exist: D:\\sdkwork-space\\sdkwork-rtc\\sdks\\sdkwork-rtc-app-sdk\\sdkwork-rtc-app-sdk-java"
+    },
+    {
+      "id": "im",
+      "title": "IM & Messaging",
+      "supported": true,
+      "mode": "linked",
+      "language": "kotlin",
+      "packageName": "com.sdkwork:im-app-api-generated",
+      "sdkPath": "../sdkwork-im/sdks/sdkwork-im-app-sdk/sdkwork-im-app-sdk-kotlin",
+      "reason": null
+    },
+    {
+      "id": "agents",
+      "title": "Agents",
+      "supported": false,
+      "mode": "unsupported-language",
+      "language": null,
+      "packageName": null,
+      "sdkPath": null,
+      "reason": "sdkwork-agents-app-sdk has no kotlin/java output"
+    },
+    {
+      "id": "order",
+      "title": "Order & Checkout",
+      "supported": false,
+      "mode": "unsupported-language",
+      "language": null,
+      "packageName": null,
+      "sdkPath": null,
+      "reason": "sdkwork-order-app-sdk has no kotlin/java output"
+    },
+    {
+      "id": "drive",
+      "title": "Drive & Upload",
+      "supported": true,
+      "mode": "linked",
+      "language": "java",
+      "packageName": "com.sdkwork:sdkwork-drive-app-sdk-generated",
+      "sdkPath": "../sdkwork-drive/sdks/sdkwork-drive-app-sdk/sdkwork-drive-app-sdk-java",
+      "reason": null
+    },
+    {
+      "id": "payment",
+      "title": "Payment",
+      "supported": false,
+      "mode": "unsupported-language",
+      "language": null,
+      "packageName": null,
+      "sdkPath": null,
+      "reason": "sdkwork-payment-app-sdk has no kotlin/java output"
+    },
+    {
+      "id": "comments",
+      "title": "Comments",
+      "supported": false,
+      "mode": "unsupported-language",
+      "language": null,
+      "packageName": null,
+      "sdkPath": null,
+      "reason": "sdkwork-comments-app-sdk has no kotlin/java output"
+    },
+    {
+      "id": "messaging",
+      "title": "Messaging",
+      "supported": false,
+      "mode": "unsupported-language",
+      "language": null,
+      "packageName": null,
+      "sdkPath": null,
+      "reason": "sdkwork-messaging-app-sdk has no kotlin/java output"
+    }
+  ]
+}

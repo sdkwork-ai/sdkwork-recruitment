@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.component.integration",
+  "component": "rtc",
+  "title": "RTC",
+  "enabled": true,
+  "sdk": {
+    "family": "sdkwork-rtc-app-sdk",
+    "apiSurface": null,
+    "credentialMode": null,
+    "package": "@sdkwork/rtc-app-sdk"
+  },
+  "permissions": [],
+  "config": {
+    "media": "audio-video",
+    "region": "auto"
+  },
+  "runtime": {
+    "architecture": "h5",
+    "mode": "declared",
+    "supported": false,
+    "reason": "generated TypeScript transport dist is missing; build the dependency SDK before linking"
+  }
+}

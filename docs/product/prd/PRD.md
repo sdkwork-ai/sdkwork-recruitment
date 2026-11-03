@@ -20,7 +20,7 @@ Identify the primary users, their context, and the jobs they need to complete.
 
 ## 3. Goals And Non-Goals
 
-- Goal: deliver a focused `recruitment` capability through the PC and H5 surfaces selected at generation time.
+- Goal: deliver a focused `recruitment` capability through the architectures selected at generation time.
 - Non-goal: add unrelated domains, speculative integrations, or backend APIs before a validated requirement exists.
 
 ## 4. Scope
@@ -28,7 +28,7 @@ Identify the primary users, their context, and the jobs they need to complete.
 Initial scaffold scope:
 
 - Repository baseline, Canon documentation, and application identity.
-- pc, h5 browser surface shells.
+- pc, h5, pad, ios, android, harmony, flutter, mini-program architecture shells.
 - Standard local command surface and verification.
 
 Product scope is captured in requirements before implementation.

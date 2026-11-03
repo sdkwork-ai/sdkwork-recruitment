@@ -11,19 +11,20 @@ Specs: ARCHITECTURE_DECISION_SPEC.md, DOCUMENTATION_SPEC.md
 
 ## 1. Architecture Overview
 
-`sdkwork-recruitment` is initialized as an SDKWork application with 2 browser surface(s): pc, h5.
+`sdkwork-recruitment` is initialized as an SDKWork application with 8 architecture root(s): pc, h5, pad, ios, android, harmony, flutter, mini-program.
 
-The app shells are thin React/Vite composition roots. Business behavior, service ports, generated SDK clients, and route contributions are added later under the owning architecture standard.
+The app shells are thin composition roots. Business behavior, service ports, generated SDK clients, and route contributions are added later under the owning architecture standard. 10 common component(s) are selected and resolved per architecture: iam, appbase, rtc, im, agents, order, drive, payment, comments, messaging.
 
 ## 2. Technology Choices
 
 | Concern | Choice |
 | --- | --- |
-| Language | TypeScript, strict mode |
-| UI | React 19 |
-| Build | Vite |
-| Package manager | pnpm workspace |
-| Browser surfaces | pc, h5 |
+| Languages | Per-architecture: TypeScript, Dart, Swift, Kotlin, ArkTS |
+| UI | React 19, Flutter, SwiftUI, Jetpack Compose, ArkUI, native mini-program |
+| Build | Vite, Flutter, Xcode, Gradle, hvigor, mini-program tooling |
+| Package manager | pnpm workspace plus native package managers |
+| Architectures | pc, h5, pad, ios, android, harmony, flutter, mini-program |
+| Components | iam, appbase, rtc, im, agents, order, drive, payment, comments, messaging |
 | Local verification | `pnpm check`, `pnpm test`, `pnpm build` |
 
 ## 3. System Boundaries And Modules
@@ -38,12 +39,20 @@ The app shells are thin React/Vite composition roots. Business behavior, service
 
 ## 4. Directory And Package Layout
 
-- [sdkwork-recruitment-pc](apps/sdkwork-recruitment-pc/) — PC: Large-screen browser and desktop renderer.
-- [sdkwork-recruitment-h5](apps/sdkwork-recruitment-h5/) — H5: Phone-first mobile browser renderer.
+- `pc` — PC: Large-screen browser and desktop renderer.
+- `h5` — H5: Phone-first mobile browser renderer.
+- `pad` — Pad: Tablet-first React renderer with large-screen tablet behavior.
+- `ios` — iOS: Native SwiftUI iOS application shell.
+- `android` — Android: Native Kotlin/Compose Android application shell.
+- `harmony` — HarmonyOS: Native HarmonyOS ArkTS/ArkUI application shell.
+- `flutter` — Flutter: Flutter mobile application shell.
+- `mini-program` — Mini Program: WeChat mini-program TypeScript source shell.
 
 ## 5. API, SDK, And Data Ownership
 
-No API authority or generated SDK is owned at scaffold time. Before adding one:
+Selected common components are resolved from sibling `sdk-manifest.json` files. `specs/components.selected.json` records the resolved SDK package and path for each architecture. Web/tablet roots consume TypeScript app SDKs through `src/composition/sdkClients.ts`; Flutter roots use Dart/Flutter path dependencies; native roots carry a generated component registry and an SDK integration plan until their native package manager is wired.
+
+The application still owns no API authority at scaffold time. Product APIs and generated application SDKs are added after requirements are captured. Before adding one:
 
 1. Capture the requirement and architecture decision.
 2. Define the API contract under `apis/`.
@@ -64,7 +73,7 @@ Follow `../sdkwork-specs/SECURITY_SPEC.md`, `../sdkwork-specs/PRIVACY_SPEC.md`, 
 
 ## 7. Deployment And Runtime Topology
 
-The scaffold currently builds static browser artifacts under `apps/*/dist/<deployment-profile>/<environment>/`. No server runtime or container is defined. Add `specs/topology.spec.json`, `etc/topology/`, and deployment descriptors before introducing a deployable API runtime.
+The scaffold currently builds static web/tablet artifacts under `apps/*/dist/<deployment-profile>/<environment>/`; native roots are packaged by Xcode, Gradle, hvigor, Flutter, and WeChat tooling. No server runtime or container is defined. Add `specs/topology.spec.json`, `etc/topology/`, and deployment descriptors before introducing a deployable API runtime.
 
 Follow `../sdkwork-specs/APP_RUNTIME_TOPOLOGY_SPEC.md` and `../sdkwork-specs/DEPLOYMENT_SPEC.md`.
 

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.component.integration",
+  "component": "order",
+  "title": "Order & Checkout",
+  "enabled": true,
+  "sdk": {
+    "family": "sdkwork-order-app-sdk",
+    "apiSurface": "app",
+    "credentialMode": "authenticated-app-api",
+    "package": "@sdkwork/order-app-sdk"
+  },
+  "permissions": [],
+  "config": {
+    "currency": "CNY",
+    "idempotency": true
+  },
+  "runtime": {
+    "architecture": "pad",
+    "mode": "linked",
+    "supported": true,
+    "reason": null
+  }
+}

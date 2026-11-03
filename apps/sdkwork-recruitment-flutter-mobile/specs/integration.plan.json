@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.scaffold.architecture-integration",
+  "architecture": "flutter",
+  "title": "Flutter",
+  "kindName": "flutter",
+  "language": "dart",
+  "runtime": {
+    "family": "mobile",
+    "framework": "flutter",
+    "defaultPlatform": "APP",
+    "defaultArchitecture": "flutter-mobile"
+  },
+  "components": [
+    {
+      "id": "iam",
+      "title": "IAM & Session",
+      "supported": true,
+      "mode": "linked",
+      "language": "flutter",
+      "packageName": "sdkwork_iam_app_sdk",
+      "sdkPath": "../sdkwork-iam/sdks/sdkwork-iam-app-sdk/sdkwork-iam-app-sdk-flutter/generated/server-openapi",
+      "reason": null
+    },
+    {
+      "id": "appbase",
+      "title": "Appbase Foundation",
+      "supported": true,
+      "mode": "runtime",
+      "language": null,
+      "packageName": null,
+      "sdkPath": null,
+      "reason": null
+    },
+    {
+      "id": "rtc",
+      "title": "RTC",
+      "supported": true,
+      "mode": "linked",
+      "language": "dart",
+      "packageName": "sdkwork_rtc_app_sdk",
+      "sdkPath": "../sdkwork-rtc/sdks/sdkwork-rtc-app-sdk/sdkwork-rtc-app-sdk-dart",
+      "reason": null
+    },
+    {
+      "id": "im",
+      "title": "IM & Messaging",
+      "supported": false,
+      "mode": "declared",
+      "language": "flutter",
+      "packageName": "im_app_api_generated",
+      "sdkPath": "../sdkwork-im/sdks/sdkwork-im-app-sdk/sdkwork-im-app-sdk-flutter",
+      "reason": "Flutter SDK package is missing pubspec.yaml"
+    },
+    {
+      "id": "agents",
+      "title": "Agents",
+      "supported": true,
+      "mode": "linked",
+      "language": "flutter",
+      "packageName": "sdkwork_agents_app_sdk",
+      "sdkPath": "../sdkwork-agents/sdks/sdkwork-agents-app-sdk/sdkwork-agents-app-sdk-flutter/generated/server-openapi",
+      "reason": null
+    },
+    {
+      "id": "order",
+      "title": "Order & Checkout",
+      "supported": false,
+      "mode": "unsupported-language",
+      "language": null,
+      "packageName": null,
+      "sdkPath": null,
+      "reason": "sdkwork-order-app-sdk has no flutter/dart output"
+    },
+    {
+      "id": "drive",
+      "title": "Drive & Upload",
+      "supported": false,
+      "mode": "declared",
+      "language": "flutter",
+      "packageName": "sdkwork-drive-app-sdk-generated",
+      "sdkPath": "../sdkwork-drive/sdks/sdkwork-drive-app-sdk/sdkwork-drive-app-sdk-flutter",
+      "reason": "Flutter SDK package is missing pubspec.yaml"
+    },
+    {
+      "id": "payment",
+      "title": "Payment",
+      "supported": false,
+      "mode": "unsupported-language",
+      "language": null,
+      "packageName": null,
+      "sdkPath": null,
+      "reason": "sdkwork-payment-app-sdk has no flutter/dart output"
+    },
+    {
+      "id": "comments",
+      "title": "Comments",
+      "supported": false,
+      "mode": "unsupported-language",
+      "language": null,
+      "packageName": null,
+      "sdkPath": null,
+      "reason": "sdkwork-comments-app-sdk has no flutter/dart output"
+    },
+    {
+      "id": "messaging",
+      "title": "Messaging",
+      "supported": false,
+      "mode": "unsupported-language",
+      "language": null,
+      "packageName": null,
+      "sdkPath": null,
+      "reason": "sdkwork-messaging-app-sdk has no flutter/dart output"
+    }
+  ]
+}

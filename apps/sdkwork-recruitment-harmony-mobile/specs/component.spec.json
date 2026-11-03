@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.component.spec",
+  "component": {
+    "name": "sdkwork-recruitment-harmony-mobile",
+    "displayName": "SDKWork Recruitment HarmonyOS",
+    "version": "0.1.0",
+    "type": "harmony-native-app",
+    "root": "apps/sdkwork-recruitment-harmony-mobile",
+    "domain": "recruitment",
+    "capability": "recruitment",
+    "surface": "app",
+    "languages": [
+      "arkts",
+      "typescript"
+    ],
+    "generated": false,
+    "manifests": [
+      "oh-package.json5",
+      "package.json"
+    ]
+  },
+  "canonicalSpecs": [
+    {
+      "file": "APPLICATION_SPEC.md",
+      "path": "../../../sdkwork-specs/APPLICATION_SPEC.md",
+      "purpose": "Application composition boundaries."
+    },
+    {
+      "file": "HARMONY_APP_MOBILE_ARCHITECTURE_SPEC.md",
+      "path": "../../../sdkwork-specs/HARMONY_APP_MOBILE_ARCHITECTURE_SPEC.md",
+      "purpose": "HarmonyOS application root architecture."
+    },
+    {
+      "file": "APP_HARMONY_NATIVE_UI_SPEC.md",
+      "path": "../../../sdkwork-specs/APP_HARMONY_NATIVE_UI_SPEC.md",
+      "purpose": "HarmonyOS UI package rules."
+    },
+    {
+      "file": "CODE_STYLE_SPEC.md",
+      "path": "../../../sdkwork-specs/CODE_STYLE_SPEC.md",
+      "purpose": "Authored code structure."
+    },
+    {
+      "file": "NAMING_SPEC.md",
+      "path": "../../../sdkwork-specs/NAMING_SPEC.md",
+      "purpose": "Canonical naming."
+    }
+  ],
+  "contracts": {
+    "layerRole": "runtime-composition",
+    "publicExports": [
+      "."
+    ],
+    "providedPorts": [],
+    "requiredPorts": [],
+    "runtimeEntrypoints": [
+      "entry/src/main/ets/entryability/EntryAbility.ets"
+    ],
+    "routeManifest": null,
+    "sdkClients": [],
+    "sdkDependencies": [
+      {
+        "workspace": "sdkwork-iam-app-sdk",
+        "permissionModuleId": "iam-kernel",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/iam-app-sdk",
+        "architecture": "harmony"
+      },
+      {
+        "workspace": "sdkwork-im-app-sdk",
+        "permissionModuleId": "im",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/im-app-sdk",
+        "architecture": "harmony"
+      },
+      {
+        "workspace": "sdkwork-agents-app-sdk",
+        "permissionModuleId": "agents",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/agents-app-sdk",
+        "architecture": "harmony"
+      },
+      {
+        "workspace": "sdkwork-order-app-sdk",
+        "permissionModuleId": "commerce",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/order-app-sdk",
+        "architecture": "harmony"
+      },
+      {
+        "workspace": "sdkwork-drive-app-sdk",
+        "permissionModuleId": "drive",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/drive-app-sdk",
+        "architecture": "harmony"
+      },
+      {
+        "workspace": "sdkwork-payment-app-sdk",
+        "permissionModuleId": "payment",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/payment-app-sdk",
+        "architecture": "harmony"
+      },
+      {
+        "workspace": "sdkwork-comments-app-sdk",
+        "permissionModuleId": "comments",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/comments-app-sdk",
+        "architecture": "harmony"
+      },
+      {
+        "workspace": "sdkwork-messaging-app-sdk",
+        "permissionModuleId": "messaging",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/messaging-app-sdk",
+        "architecture": "harmony"
+      }
+    ],
+    "permissionComposition": {},
+    "dependencyApiExports": [],
+    "dependencyApiSurfaces": [],
+    "events": [],
+    "configKeys": [
+      "oh-package.json5",
+      "config/components"
+    ]
+  },
+  "verification": {
+    "commands": [
+      "hvigorw assembleHap"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "sdkwork-recruitment-android-mobile",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Native Android surface for SDKWork Recruitment.",
+  "scripts": {
+    "build": "gradle :app:assembleDebug",
+    "test": "gradle :app:testDebugUnitTest"
+  },
+  "sdkwork": {
+    "kind": "android",
+    "architecture": "android",
+    "componentType": "android-native-app",
+    "architectureSpec": "ANDROID_APP_MOBILE_ARCHITECTURE_SPEC.md"
+  }
+}

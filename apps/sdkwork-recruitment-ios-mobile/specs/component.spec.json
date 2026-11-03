@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.component.spec",
+  "component": {
+    "name": "sdkwork-recruitment-ios-mobile",
+    "displayName": "SDKWork Recruitment iOS",
+    "version": "0.1.0",
+    "type": "ios-native-app",
+    "root": "apps/sdkwork-recruitment-ios-mobile",
+    "domain": "recruitment",
+    "capability": "recruitment",
+    "surface": "app",
+    "languages": [
+      "swift"
+    ],
+    "generated": false,
+    "manifests": [
+      "Package.swift",
+      "package.json"
+    ]
+  },
+  "canonicalSpecs": [
+    {
+      "file": "APPLICATION_SPEC.md",
+      "path": "../../../sdkwork-specs/APPLICATION_SPEC.md",
+      "purpose": "Application composition boundaries."
+    },
+    {
+      "file": "IOS_APP_MOBILE_ARCHITECTURE_SPEC.md",
+      "path": "../../../sdkwork-specs/IOS_APP_MOBILE_ARCHITECTURE_SPEC.md",
+      "purpose": "iOS application root architecture."
+    },
+    {
+      "file": "APP_IOS_NATIVE_UI_SPEC.md",
+      "path": "../../../sdkwork-specs/APP_IOS_NATIVE_UI_SPEC.md",
+      "purpose": "iOS UI package rules."
+    },
+    {
+      "file": "CODE_STYLE_SPEC.md",
+      "path": "../../../sdkwork-specs/CODE_STYLE_SPEC.md",
+      "purpose": "Authored code structure."
+    },
+    {
+      "file": "NAMING_SPEC.md",
+      "path": "../../../sdkwork-specs/NAMING_SPEC.md",
+      "purpose": "Canonical naming."
+    }
+  ],
+  "contracts": {
+    "layerRole": "runtime-composition",
+    "publicExports": [
+      "."
+    ],
+    "providedPorts": [],
+    "requiredPorts": [],
+    "runtimeEntrypoints": [
+      "App/App.swift"
+    ],
+    "routeManifest": null,
+    "sdkClients": [],
+    "sdkDependencies": [
+      {
+        "workspace": "sdkwork-iam-app-sdk",
+        "permissionModuleId": "iam-kernel",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "sdkwork-iam-app-sdk",
+        "architecture": "ios"
+      },
+      {
+        "workspace": "sdkwork-im-app-sdk",
+        "permissionModuleId": "im",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "ImAppApiGenerated",
+        "architecture": "ios"
+      }
+    ],
+    "permissionComposition": {},
+    "dependencyApiExports": [],
+    "dependencyApiSurfaces": [],
+    "events": [],
+    "configKeys": [
+      "Package.swift",
+      "config/components"
+    ]
+  },
+  "verification": {
+    "commands": [
+      "swift test"
+    ]
+  }
+}

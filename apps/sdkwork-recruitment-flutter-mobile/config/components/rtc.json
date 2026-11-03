@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.component.integration",
+  "component": "rtc",
+  "title": "RTC",
+  "enabled": true,
+  "sdk": {
+    "family": "sdkwork-rtc-app-sdk",
+    "apiSurface": "app",
+    "credentialMode": "authenticated-app-api",
+    "package": "sdkwork_rtc_app_sdk"
+  },
+  "permissions": [],
+  "config": {
+    "media": "audio-video",
+    "region": "auto"
+  },
+  "runtime": {
+    "architecture": "flutter",
+    "mode": "linked",
+    "supported": true,
+    "reason": null
+  }
+}

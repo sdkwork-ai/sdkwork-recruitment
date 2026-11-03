@@ -1,0 +1,16 @@
+{
+  "name": "sdkwork-recruitment-harmony-mobile",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Native HarmonyOS surface for SDKWork Recruitment.",
+  "scripts": {
+    "build": "hvigorw assembleHap",
+    "test": "hvigorw test"
+  },
+  "sdkwork": {
+    "kind": "harmony",
+    "architecture": "harmony",
+    "componentType": "harmony-native-app",
+    "architectureSpec": "HARMONY_APP_MOBILE_ARCHITECTURE_SPEC.md"
+  }
+}

@@ -1,3 +1,4 @@
-# Local capture scratch and generated derivatives
-capture/output/
-media/generated/
+capture/raw/
+*.tmp
+.DS_Store
+Thumbs.db

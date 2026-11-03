@@ -52,6 +52,102 @@
       ],
       "theme": "light",
       "readySelector": "[data-sdkwork-app-ready]"
+    },
+    {
+      "id": "ios-primary",
+      "kind": "ui",
+      "tool": "ios-xctest",
+      "platform": "APP_IOS",
+      "deviceClass": "IPHONE",
+      "displayType": "IPHONE_6_9",
+      "viewport": {
+        "width": 440,
+        "height": 956,
+        "deviceScaleFactor": 3
+      },
+      "locales": [
+        "en-US"
+      ],
+      "routes": [
+        {
+          "id": "app.home",
+          "path": "/"
+        }
+      ],
+      "theme": "light",
+      "readySelector": "[data-sdkwork-app-ready]"
+    },
+    {
+      "id": "android-primary",
+      "kind": "ui",
+      "tool": "android-instrumentation",
+      "platform": "APP_ANDROID",
+      "deviceClass": "ANDROID_PHONE",
+      "displayType": "ANDROID_PHONE",
+      "viewport": {
+        "width": 540,
+        "height": 960,
+        "deviceScaleFactor": 2
+      },
+      "locales": [
+        "en-US"
+      ],
+      "routes": [
+        {
+          "id": "app.home",
+          "path": "/"
+        }
+      ],
+      "theme": "light",
+      "readySelector": "[data-sdkwork-app-ready]"
+    },
+    {
+      "id": "harmony-primary",
+      "kind": "ui",
+      "tool": "harmony-test",
+      "platform": "APP_HARMONY",
+      "deviceClass": "HARMONY_PHONE",
+      "displayType": "HARMONY_PHONE",
+      "viewport": {
+        "width": 540,
+        "height": 960,
+        "deviceScaleFactor": 2
+      },
+      "locales": [
+        "en-US"
+      ],
+      "routes": [
+        {
+          "id": "app.home",
+          "path": "/"
+        }
+      ],
+      "theme": "light",
+      "readySelector": "[data-sdkwork-app-ready]"
+    },
+    {
+      "id": "mini-program-primary",
+      "kind": "ui",
+      "tool": "mini-program-automator",
+      "platform": "MP_WEIXIN",
+      "deviceClass": "MINI_PROGRAM",
+      "displayType": "MINI_PROGRAM_9_16",
+      "viewport": {
+        "width": 375,
+        "height": 667,
+        "deviceScaleFactor": 2
+      },
+      "locales": [
+        "en-US"
+      ],
+      "routes": [
+        {
+          "id": "app.home",
+          "path": "/"
+        }
+      ],
+      "theme": "light",
+      "readySelector": "[data-sdkwork-app-ready]"
     }
   ],
   "capture": {

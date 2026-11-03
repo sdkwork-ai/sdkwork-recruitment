@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.component.integration",
+  "component": "drive",
+  "title": "Drive & Upload",
+  "enabled": true,
+  "sdk": {
+    "family": "sdkwork-drive-app-sdk",
+    "apiSurface": null,
+    "credentialMode": null,
+    "package": "sdkwork-drive-app-sdk-generated"
+  },
+  "permissions": [],
+  "config": {
+    "uploadProfile": "default",
+    "maxInlineUploadBytes": 10485760
+  },
+  "runtime": {
+    "architecture": "flutter",
+    "mode": "declared",
+    "supported": false,
+    "reason": "Flutter SDK package is missing pubspec.yaml"
+  }
+}

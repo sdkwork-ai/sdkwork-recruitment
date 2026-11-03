@@ -1,0 +1,31 @@
+name: sdkwork_recruitment_flutter_mobile
+description: SDKWork Recruitment application initialized from the SDKWork scaffold.
+publish_to: none
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.5.0 <4.0.0"
+  flutter: ">=3.24.0"
+
+dependencies:
+  sdkwork_iam_app_sdk:
+    path: ../../../sdkwork-iam/sdks/sdkwork-iam-app-sdk/sdkwork-iam-app-sdk-flutter/generated/server-openapi
+  sdkwork_rtc_app_sdk:
+    path: ../../../sdkwork-rtc/sdks/sdkwork-rtc-app-sdk/sdkwork-rtc-app-sdk-dart
+  sdkwork_agents_app_sdk:
+    path: ../../../sdkwork-agents/sdks/sdkwork-agents-app-sdk/sdkwork-agents-app-sdk-flutter/generated/server-openapi
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+dependency_overrides:
+  sdkwork_common_flutter:
+    path: ../../../sdkwork-sdk-commons/sdkwork-sdk-common-flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

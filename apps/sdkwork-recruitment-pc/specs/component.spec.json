@@ -10,9 +10,14 @@
     "domain": "recruitment",
     "capability": "recruitment",
     "surface": "app",
-    "languages": ["typescript", "react"],
+    "languages": [
+      "typescript",
+      "react"
+    ],
     "generated": false,
-    "manifests": ["package.json"]
+    "manifests": [
+      "package.json"
+    ]
   },
   "canonicalSpecs": [
     {
@@ -53,20 +58,96 @@
   ],
   "contracts": {
     "layerRole": "runtime-composition",
-    "publicExports": ["."],
+    "publicExports": [
+      "."
+    ],
     "providedPorts": [],
     "requiredPorts": [],
-    "runtimeEntrypoints": ["package.json#scripts.dev", "package.json#scripts.build"],
+    "runtimeEntrypoints": [
+      "package.json#scripts.dev",
+      "package.json#scripts.build"
+    ],
     "routeManifest": null,
     "sdkClients": [],
-    "sdkDependencies": [],
+    "sdkDependencies": [
+      {
+        "workspace": "sdkwork-iam-app-sdk",
+        "permissionModuleId": "iam-kernel",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/iam-app-sdk",
+        "architecture": "pc"
+      },
+      {
+        "workspace": "sdkwork-im-app-sdk",
+        "permissionModuleId": "im",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/im-app-sdk",
+        "architecture": "pc"
+      },
+      {
+        "workspace": "sdkwork-agents-app-sdk",
+        "permissionModuleId": "agents",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/agents-app-sdk",
+        "architecture": "pc"
+      },
+      {
+        "workspace": "sdkwork-order-app-sdk",
+        "permissionModuleId": "commerce",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/order-app-sdk",
+        "architecture": "pc"
+      },
+      {
+        "workspace": "sdkwork-drive-app-sdk",
+        "permissionModuleId": "drive",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/drive-app-sdk",
+        "architecture": "pc"
+      },
+      {
+        "workspace": "sdkwork-payment-app-sdk",
+        "permissionModuleId": "payment",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/payment-app-sdk",
+        "architecture": "pc"
+      },
+      {
+        "workspace": "sdkwork-comments-app-sdk",
+        "permissionModuleId": "comments",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/comments-app-sdk",
+        "architecture": "pc"
+      },
+      {
+        "workspace": "sdkwork-messaging-app-sdk",
+        "permissionModuleId": "messaging",
+        "surface": "app-api",
+        "credentialMode": "authenticated-app-api",
+        "packageName": "@sdkwork/messaging-app-sdk",
+        "architecture": "pc"
+      }
+    ],
     "permissionComposition": {},
     "dependencyApiExports": [],
     "dependencyApiSurfaces": [],
     "events": [],
-    "configKeys": ["package.json#sdkwork", "vite.config.ts"]
+    "configKeys": [
+      "package.json#sdkwork",
+      "vite.config.ts"
+    ]
   },
   "verification": {
-    "commands": ["pnpm --dir apps/sdkwork-recruitment-pc typecheck", "pnpm --dir apps/sdkwork-recruitment-pc build"]
+    "commands": [
+      "pnpm --dir apps/sdkwork-recruitment-pc typecheck",
+      "pnpm --dir apps/sdkwork-recruitment-pc build"
+    ]
   }
 }

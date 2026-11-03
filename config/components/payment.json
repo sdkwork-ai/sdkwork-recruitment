@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.component.integration",
+  "component": "payment",
+  "title": "Payment",
+  "enabled": true,
+  "sdk": {
+    "family": "sdkwork-payment-app-sdk",
+    "apiSurface": "app",
+    "credentialMode": "authenticated-app-api",
+    "package": "@sdkwork/payment-app-sdk"
+  },
+  "permissions": [],
+  "config": {
+    "channels": [
+      "wechat",
+      "alipay"
+    ]
+  },
+  "runtime": {
+    "architecture": "pc",
+    "mode": "linked",
+    "supported": true,
+    "reason": null
+  }
+}

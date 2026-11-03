@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.component.integration",
+  "component": "order",
+  "title": "Order & Checkout",
+  "enabled": true,
+  "sdk": {
+    "family": "sdkwork-order-app-sdk",
+    "apiSurface": null,
+    "credentialMode": null,
+    "package": null
+  },
+  "permissions": [],
+  "config": {
+    "currency": "CNY",
+    "idempotency": true
+  },
+  "runtime": {
+    "architecture": "flutter",
+    "mode": "unsupported-language",
+    "supported": false,
+    "reason": "sdkwork-order-app-sdk has no flutter/dart output"
+  }
+}

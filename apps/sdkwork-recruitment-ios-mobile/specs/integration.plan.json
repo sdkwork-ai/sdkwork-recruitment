@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.scaffold.architecture-integration",
+  "architecture": "ios",
+  "title": "iOS",
+  "kindName": "ios",
+  "language": "swift",
+  "runtime": {
+    "family": "mobile",
+    "framework": "ios-native",
+    "defaultPlatform": "APP_IOS",
+    "defaultArchitecture": "arm64"
+  },
+  "components": [
+    {
+      "id": "iam",
+      "title": "IAM & Session",
+      "supported": true,
+      "mode": "linked",
+      "language": "swift",
+      "packageName": "sdkwork-iam-app-sdk",
+      "sdkPath": "../sdkwork-iam/sdks/sdkwork-iam-app-sdk/sdkwork-iam-app-sdk-swift/generated/server-openapi",
+      "reason": null
+    },
+    {
+      "id": "appbase",
+      "title": "Appbase Foundation",
+      "supported": false,
+      "mode": "runtime-unavailable",
+      "language": null,
+      "packageName": null,
+      "sdkPath": null,
+      "reason": "No runtime package is declared for ios"
+    },
+    {
+      "id": "rtc",
+      "title": "RTC",
+      "supported": false,
+      "mode": "unsupported-language",
+      "language": null,
+      "packageName": null,
+      "sdkPath": null,
+      "reason": "sdkwork-rtc-app-sdk has no swift output"
+    },
+    {
+      "id": "im",
+      "title": "IM & Messaging",
+      "supported": true,
+      "mode": "linked",
+      "language": "swift",
+      "packageName": "ImAppApiGenerated",
+      "sdkPath": "../sdkwork-im/sdks/sdkwork-im-app-sdk/sdkwork-im-app-sdk-swift",
+      "reason": null
+    },
+    {
+      "id": "agents",
+      "title": "Agents",
+      "supported": false,
+      "mode": "unsupported-language",
+      "language": null,
+      "packageName": null,
+      "sdkPath": null,
+      "reason": "sdkwork-agents-app-sdk has no swift output"
+    },
+    {
+      "id": "order",
+      "title": "Order & Checkout",
+      "supported": false,
+      "mode": "unsupported-language",
+      "language": null,
+      "packageName": null,
+      "sdkPath": null,
+      "reason": "sdkwork-order-app-sdk has no swift output"
+    },
+    {
+      "id": "drive",
+      "title": "Drive & Upload",
+      "supported": false,
+      "mode": "unsupported-language",
+      "language": null,
+      "packageName": null,
+      "sdkPath": null,
+      "reason": "sdkwork-drive-app-sdk has no swift output"
+    },
+    {
+      "id": "payment",
+      "title": "Payment",
+      "supported": false,
+      "mode": "unsupported-language",
+      "language": null,
+      "packageName": null,
+      "sdkPath": null,
+      "reason": "sdkwork-payment-app-sdk has no swift output"
+    },
+    {
+      "id": "comments",
+      "title": "Comments",
+      "supported": false,
+      "mode": "unsupported-language",
+      "language": null,
+      "packageName": null,
+      "sdkPath": null,
+      "reason": "sdkwork-comments-app-sdk has no swift output"
+    },
+    {
+      "id": "messaging",
+      "title": "Messaging",
+      "supported": false,
+      "mode": "unsupported-language",
+      "language": null,
+      "packageName": null,
+      "sdkPath": null,
+      "reason": "sdkwork-messaging-app-sdk has no swift output"
+    }
+  ]
+}

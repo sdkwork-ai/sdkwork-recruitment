@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.component.integration",
+  "component": "agents",
+  "title": "Agents",
+  "enabled": true,
+  "sdk": {
+    "family": "sdkwork-agents-app-sdk",
+    "apiSurface": "app",
+    "credentialMode": "authenticated-app-api",
+    "package": "@sdkwork/agents-app-sdk"
+  },
+  "permissions": [],
+  "config": {
+    "streaming": true,
+    "toolApproval": "explicit"
+  },
+  "runtime": {
+    "architecture": "mini-program",
+    "mode": "linked",
+    "supported": true,
+    "reason": null
+  }
+}

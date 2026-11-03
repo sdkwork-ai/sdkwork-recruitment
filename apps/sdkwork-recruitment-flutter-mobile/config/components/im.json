@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.component.integration",
+  "component": "im",
+  "title": "IM & Messaging",
+  "enabled": true,
+  "sdk": {
+    "family": "sdkwork-im-app-sdk",
+    "apiSurface": null,
+    "credentialMode": null,
+    "package": "im_app_api_generated"
+  },
+  "permissions": [],
+  "config": {
+    "historyPageSize": 50,
+    "readReceipts": true,
+    "presence": true
+  },
+  "runtime": {
+    "architecture": "flutter",
+    "mode": "declared",
+    "supported": false,
+    "reason": "Flutter SDK package is missing pubspec.yaml"
+  }
+}

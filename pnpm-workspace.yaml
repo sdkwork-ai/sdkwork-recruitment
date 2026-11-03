@@ -1,5 +1,31 @@
 packages:
   - "apps/*"
+  - "../sdkwork-agents/sdks/sdkwork-agents-app-sdk/sdkwork-agents-app-sdk-typescript"
+  - "../sdkwork-comments/sdks/sdkwork-comments-app-sdk/sdkwork-comments-app-sdk-typescript"
+  - "../sdkwork-drive/sdks/sdkwork-drive-app-sdk/sdkwork-drive-app-sdk-typescript"
+  - "../sdkwork-iam/sdks/sdkwork-iam-app-sdk/sdkwork-iam-app-sdk-typescript"
+  - "../sdkwork-im/sdks/sdkwork-im-app-sdk/sdkwork-im-app-sdk-typescript"
+  - "../sdkwork-messaging/sdks/sdkwork-messaging-app-sdk/sdkwork-messaging-app-sdk-typescript"
+  - "../sdkwork-order/sdks/sdkwork-order-app-sdk/sdkwork-order-app-sdk-typescript"
+  - "../sdkwork-payment/sdks/sdkwork-payment-app-sdk/sdkwork-payment-app-sdk-typescript"
+  - "../sdkwork-sdk-commons/sdkwork-sdk-common-typescript"
+  - "../sdkwork-utils/packages/sdkwork-utils-typescript"
 
 allowBuilds:
   esbuild: true
+
+catalog:
+  "@types/node": ^24.0.0
+  "@types/react": ^19.2.0
+  "@types/react-dom": ^19.2.0
+  "@vitejs/plugin-react": ^5.0.0
+  clsx: ^2.1.1
+  lucide-react: ^0.468.0
+  react: ^19.2.0
+  react-dom: ^19.2.0
+  tailwind-merge: ^2.5.2
+  tsx: ^4.23.12
+  typescript: ^5.9.0
+  vite: ^7.1.0
+  vitest: ^3.2.0
+  zod: ^3.25.0

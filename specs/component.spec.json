@@ -10,7 +10,7 @@
     "domain": "recruitment",
     "capability": "recruitment",
     "surface": "app",
-    "languages": ["typescript", "react"],
+    "languages": ["typescript","react","swift","kotlin","arkts","dart"],
     "generated": false,
     "manifests": ["package.json", "agent.app.config.json"]
   },

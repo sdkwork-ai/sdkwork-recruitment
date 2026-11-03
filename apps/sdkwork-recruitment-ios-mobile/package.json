@@ -1,0 +1,16 @@
+{
+  "name": "sdkwork-recruitment-ios-mobile",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Native iOS surface for SDKWork Recruitment.",
+  "scripts": {
+    "build": "swift build",
+    "test": "swift test"
+  },
+  "sdkwork": {
+    "kind": "ios",
+    "architecture": "ios",
+    "componentType": "ios-native-app",
+    "architectureSpec": "IOS_APP_MOBILE_ARCHITECTURE_SPEC.md"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.component.integration",
+  "component": "im",
+  "title": "IM & Messaging",
+  "enabled": true,
+  "sdk": {
+    "family": "sdkwork-im-app-sdk",
+    "apiSurface": "app",
+    "credentialMode": "authenticated-app-api",
+    "package": "com.sdkwork:im-app-api-generated"
+  },
+  "permissions": [],
+  "config": {
+    "historyPageSize": 50,
+    "readReceipts": true,
+    "presence": true
+  },
+  "runtime": {
+    "architecture": "android",
+    "mode": "linked",
+    "supported": true,
+    "reason": null
+  }
+}

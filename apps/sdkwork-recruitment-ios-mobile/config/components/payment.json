@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.component.integration",
+  "component": "payment",
+  "title": "Payment",
+  "enabled": true,
+  "sdk": {
+    "family": "sdkwork-payment-app-sdk",
+    "apiSurface": null,
+    "credentialMode": null,
+    "package": null
+  },
+  "permissions": [],
+  "config": {
+    "channels": [
+      "wechat",
+      "alipay"
+    ]
+  },
+  "runtime": {
+    "architecture": "ios",
+    "mode": "unsupported-language",
+    "supported": false,
+    "reason": "sdkwork-payment-app-sdk has no swift output"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.component.integration",
+  "component": "agents",
+  "title": "Agents",
+  "enabled": true,
+  "sdk": {
+    "family": "sdkwork-agents-app-sdk",
+    "apiSurface": null,
+    "credentialMode": null,
+    "package": null
+  },
+  "permissions": [],
+  "config": {
+    "streaming": true,
+    "toolApproval": "explicit"
+  },
+  "runtime": {
+    "architecture": "ios",
+    "mode": "unsupported-language",
+    "supported": false,
+    "reason": "sdkwork-agents-app-sdk has no swift output"
+  }
+}

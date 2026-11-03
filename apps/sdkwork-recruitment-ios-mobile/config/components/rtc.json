@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.component.integration",
+  "component": "rtc",
+  "title": "RTC",
+  "enabled": true,
+  "sdk": {
+    "family": "sdkwork-rtc-app-sdk",
+    "apiSurface": null,
+    "credentialMode": null,
+    "package": null
+  },
+  "permissions": [],
+  "config": {
+    "media": "audio-video",
+    "region": "auto"
+  },
+  "runtime": {
+    "architecture": "ios",
+    "mode": "unsupported-language",
+    "supported": false,
+    "reason": "sdkwork-rtc-app-sdk has no swift output"
+  }
+}

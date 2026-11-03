@@ -1,0 +1,824 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.scaffold.component-selection",
+  "generatedAt": "2026-11-03T15:33:53.796Z",
+  "architectures": [
+    "pc",
+    "h5",
+    "pad",
+    "ios",
+    "android",
+    "harmony",
+    "flutter",
+    "mini-program"
+  ],
+  "components": [
+    {
+      "id": "iam",
+      "title": "IAM & Session",
+      "category": "foundation",
+      "repo": "sdkwork-iam",
+      "kind": "sdk",
+      "sdkFamily": "sdkwork-iam-app-sdk",
+      "permissionModuleId": "iam-kernel",
+      "config": {
+        "loginMode": "embedded",
+        "sessionPersistence": "secure-storage",
+        "refreshSession": true
+      },
+      "permissions": [],
+      "architectures": {
+        "pc": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/iam-app-sdk",
+          "sdkPath": "../sdkwork-iam/sdks/sdkwork-iam-app-sdk/sdkwork-iam-app-sdk-typescript",
+          "reason": null
+        },
+        "h5": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/iam-app-sdk",
+          "sdkPath": "../sdkwork-iam/sdks/sdkwork-iam-app-sdk/sdkwork-iam-app-sdk-typescript",
+          "reason": null
+        },
+        "pad": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/iam-app-sdk",
+          "sdkPath": "../sdkwork-iam/sdks/sdkwork-iam-app-sdk/sdkwork-iam-app-sdk-typescript",
+          "reason": null
+        },
+        "ios": {
+          "supported": true,
+          "mode": "linked",
+          "language": "swift",
+          "packageName": "sdkwork-iam-app-sdk",
+          "sdkPath": "../sdkwork-iam/sdks/sdkwork-iam-app-sdk/sdkwork-iam-app-sdk-swift/generated/server-openapi",
+          "reason": null
+        },
+        "android": {
+          "supported": true,
+          "mode": "linked",
+          "language": "kotlin",
+          "packageName": "com.sdkwork:sdkwork-iam-app-sdk",
+          "sdkPath": "../sdkwork-iam/sdks/sdkwork-iam-app-sdk/sdkwork-iam-app-sdk-kotlin/generated/server-openapi",
+          "reason": null
+        },
+        "harmony": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/iam-app-sdk",
+          "sdkPath": "../sdkwork-iam/sdks/sdkwork-iam-app-sdk/sdkwork-iam-app-sdk-typescript",
+          "reason": null
+        },
+        "flutter": {
+          "supported": true,
+          "mode": "linked",
+          "language": "flutter",
+          "packageName": "sdkwork_iam_app_sdk",
+          "sdkPath": "../sdkwork-iam/sdks/sdkwork-iam-app-sdk/sdkwork-iam-app-sdk-flutter/generated/server-openapi",
+          "reason": null
+        },
+        "mini-program": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/iam-app-sdk",
+          "sdkPath": "../sdkwork-iam/sdks/sdkwork-iam-app-sdk/sdkwork-iam-app-sdk-typescript",
+          "reason": null
+        }
+      }
+    },
+    {
+      "id": "appbase",
+      "title": "Appbase Foundation",
+      "category": "foundation",
+      "repo": "sdkwork-appbase",
+      "kind": "runtime",
+      "sdkFamily": null,
+      "permissionModuleId": "appbase",
+      "config": {
+        "errorRecovery": true,
+        "theme": "system",
+        "featureRegistry": true
+      },
+      "permissions": [],
+      "architectures": {
+        "pc": {
+          "supported": true,
+          "mode": "runtime",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": null
+        },
+        "h5": {
+          "supported": true,
+          "mode": "runtime",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": null
+        },
+        "pad": {
+          "supported": true,
+          "mode": "runtime",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": null
+        },
+        "ios": {
+          "supported": false,
+          "mode": "runtime-unavailable",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": "No runtime package is declared for ios"
+        },
+        "android": {
+          "supported": false,
+          "mode": "runtime-unavailable",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": "No runtime package is declared for android"
+        },
+        "harmony": {
+          "supported": false,
+          "mode": "runtime-unavailable",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": "No runtime package is declared for harmony"
+        },
+        "flutter": {
+          "supported": true,
+          "mode": "runtime",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": null
+        },
+        "mini-program": {
+          "supported": false,
+          "mode": "runtime-unavailable",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": "No runtime package is declared for mini-program"
+        }
+      }
+    },
+    {
+      "id": "rtc",
+      "title": "RTC",
+      "category": "communication",
+      "repo": "sdkwork-rtc",
+      "kind": "sdk",
+      "sdkFamily": "sdkwork-rtc-app-sdk",
+      "permissionModuleId": "rtc",
+      "config": {
+        "media": "audio-video",
+        "region": "auto"
+      },
+      "permissions": [],
+      "architectures": {
+        "pc": {
+          "supported": false,
+          "mode": "declared",
+          "language": "typescript",
+          "packageName": "@sdkwork/rtc-app-sdk",
+          "sdkPath": "../sdkwork-rtc/sdks/sdkwork-rtc-app-sdk/sdkwork-rtc-app-sdk-typescript",
+          "reason": "generated TypeScript transport dist is missing; build the dependency SDK before linking"
+        },
+        "h5": {
+          "supported": false,
+          "mode": "declared",
+          "language": "typescript",
+          "packageName": "@sdkwork/rtc-app-sdk",
+          "sdkPath": "../sdkwork-rtc/sdks/sdkwork-rtc-app-sdk/sdkwork-rtc-app-sdk-typescript",
+          "reason": "generated TypeScript transport dist is missing; build the dependency SDK before linking"
+        },
+        "pad": {
+          "supported": false,
+          "mode": "declared",
+          "language": "typescript",
+          "packageName": "@sdkwork/rtc-app-sdk",
+          "sdkPath": "../sdkwork-rtc/sdks/sdkwork-rtc-app-sdk/sdkwork-rtc-app-sdk-typescript",
+          "reason": "generated TypeScript transport dist is missing; build the dependency SDK before linking"
+        },
+        "ios": {
+          "supported": false,
+          "mode": "unsupported-language",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": "sdkwork-rtc-app-sdk has no swift output"
+        },
+        "android": {
+          "supported": false,
+          "mode": "declared",
+          "language": "java",
+          "packageName": "com.sdkwork:sdkwork-rtc-app-sdk",
+          "sdkPath": "../sdkwork-rtc/sdks/sdkwork-rtc-app-sdk/sdkwork-rtc-app-sdk-java",
+          "reason": "SDK package path does not exist: D:\\sdkwork-space\\sdkwork-rtc\\sdks\\sdkwork-rtc-app-sdk\\sdkwork-rtc-app-sdk-java"
+        },
+        "harmony": {
+          "supported": false,
+          "mode": "declared",
+          "language": "typescript",
+          "packageName": "@sdkwork/rtc-app-sdk",
+          "sdkPath": "../sdkwork-rtc/sdks/sdkwork-rtc-app-sdk/sdkwork-rtc-app-sdk-typescript",
+          "reason": "generated TypeScript transport dist is missing; build the dependency SDK before linking"
+        },
+        "flutter": {
+          "supported": true,
+          "mode": "linked",
+          "language": "dart",
+          "packageName": "sdkwork_rtc_app_sdk",
+          "sdkPath": "../sdkwork-rtc/sdks/sdkwork-rtc-app-sdk/sdkwork-rtc-app-sdk-dart",
+          "reason": null
+        },
+        "mini-program": {
+          "supported": false,
+          "mode": "declared",
+          "language": "typescript",
+          "packageName": "@sdkwork/rtc-app-sdk",
+          "sdkPath": "../sdkwork-rtc/sdks/sdkwork-rtc-app-sdk/sdkwork-rtc-app-sdk-typescript",
+          "reason": "generated TypeScript transport dist is missing; build the dependency SDK before linking"
+        }
+      }
+    },
+    {
+      "id": "im",
+      "title": "IM & Messaging",
+      "category": "communication",
+      "repo": "sdkwork-im",
+      "kind": "sdk",
+      "sdkFamily": "sdkwork-im-app-sdk",
+      "permissionModuleId": "im",
+      "config": {
+        "historyPageSize": 50,
+        "readReceipts": true,
+        "presence": true
+      },
+      "permissions": [],
+      "architectures": {
+        "pc": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/im-app-sdk",
+          "sdkPath": "../sdkwork-im/sdks/sdkwork-im-app-sdk/sdkwork-im-app-sdk-typescript",
+          "reason": null
+        },
+        "h5": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/im-app-sdk",
+          "sdkPath": "../sdkwork-im/sdks/sdkwork-im-app-sdk/sdkwork-im-app-sdk-typescript",
+          "reason": null
+        },
+        "pad": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/im-app-sdk",
+          "sdkPath": "../sdkwork-im/sdks/sdkwork-im-app-sdk/sdkwork-im-app-sdk-typescript",
+          "reason": null
+        },
+        "ios": {
+          "supported": true,
+          "mode": "linked",
+          "language": "swift",
+          "packageName": "ImAppApiGenerated",
+          "sdkPath": "../sdkwork-im/sdks/sdkwork-im-app-sdk/sdkwork-im-app-sdk-swift",
+          "reason": null
+        },
+        "android": {
+          "supported": true,
+          "mode": "linked",
+          "language": "kotlin",
+          "packageName": "com.sdkwork:im-app-api-generated",
+          "sdkPath": "../sdkwork-im/sdks/sdkwork-im-app-sdk/sdkwork-im-app-sdk-kotlin",
+          "reason": null
+        },
+        "harmony": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/im-app-sdk",
+          "sdkPath": "../sdkwork-im/sdks/sdkwork-im-app-sdk/sdkwork-im-app-sdk-typescript",
+          "reason": null
+        },
+        "flutter": {
+          "supported": false,
+          "mode": "declared",
+          "language": "flutter",
+          "packageName": "im_app_api_generated",
+          "sdkPath": "../sdkwork-im/sdks/sdkwork-im-app-sdk/sdkwork-im-app-sdk-flutter",
+          "reason": "Flutter SDK package is missing pubspec.yaml"
+        },
+        "mini-program": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/im-app-sdk",
+          "sdkPath": "../sdkwork-im/sdks/sdkwork-im-app-sdk/sdkwork-im-app-sdk-typescript",
+          "reason": null
+        }
+      }
+    },
+    {
+      "id": "agents",
+      "title": "Agents",
+      "category": "ai",
+      "repo": "sdkwork-agents",
+      "kind": "sdk",
+      "sdkFamily": "sdkwork-agents-app-sdk",
+      "permissionModuleId": "agents",
+      "config": {
+        "streaming": true,
+        "toolApproval": "explicit"
+      },
+      "permissions": [],
+      "architectures": {
+        "pc": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/agents-app-sdk",
+          "sdkPath": "../sdkwork-agents/sdks/sdkwork-agents-app-sdk/sdkwork-agents-app-sdk-typescript",
+          "reason": null
+        },
+        "h5": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/agents-app-sdk",
+          "sdkPath": "../sdkwork-agents/sdks/sdkwork-agents-app-sdk/sdkwork-agents-app-sdk-typescript",
+          "reason": null
+        },
+        "pad": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/agents-app-sdk",
+          "sdkPath": "../sdkwork-agents/sdks/sdkwork-agents-app-sdk/sdkwork-agents-app-sdk-typescript",
+          "reason": null
+        },
+        "ios": {
+          "supported": false,
+          "mode": "unsupported-language",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": "sdkwork-agents-app-sdk has no swift output"
+        },
+        "android": {
+          "supported": false,
+          "mode": "unsupported-language",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": "sdkwork-agents-app-sdk has no kotlin/java output"
+        },
+        "harmony": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/agents-app-sdk",
+          "sdkPath": "../sdkwork-agents/sdks/sdkwork-agents-app-sdk/sdkwork-agents-app-sdk-typescript",
+          "reason": null
+        },
+        "flutter": {
+          "supported": true,
+          "mode": "linked",
+          "language": "flutter",
+          "packageName": "sdkwork_agents_app_sdk",
+          "sdkPath": "../sdkwork-agents/sdks/sdkwork-agents-app-sdk/sdkwork-agents-app-sdk-flutter/generated/server-openapi",
+          "reason": null
+        },
+        "mini-program": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/agents-app-sdk",
+          "sdkPath": "../sdkwork-agents/sdks/sdkwork-agents-app-sdk/sdkwork-agents-app-sdk-typescript",
+          "reason": null
+        }
+      }
+    },
+    {
+      "id": "order",
+      "title": "Order & Checkout",
+      "category": "commerce",
+      "repo": "sdkwork-order",
+      "kind": "sdk",
+      "sdkFamily": "sdkwork-order-app-sdk",
+      "permissionModuleId": "commerce",
+      "config": {
+        "currency": "CNY",
+        "idempotency": true
+      },
+      "permissions": [],
+      "architectures": {
+        "pc": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/order-app-sdk",
+          "sdkPath": "../sdkwork-order/sdks/sdkwork-order-app-sdk/sdkwork-order-app-sdk-typescript",
+          "reason": null
+        },
+        "h5": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/order-app-sdk",
+          "sdkPath": "../sdkwork-order/sdks/sdkwork-order-app-sdk/sdkwork-order-app-sdk-typescript",
+          "reason": null
+        },
+        "pad": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/order-app-sdk",
+          "sdkPath": "../sdkwork-order/sdks/sdkwork-order-app-sdk/sdkwork-order-app-sdk-typescript",
+          "reason": null
+        },
+        "ios": {
+          "supported": false,
+          "mode": "unsupported-language",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": "sdkwork-order-app-sdk has no swift output"
+        },
+        "android": {
+          "supported": false,
+          "mode": "unsupported-language",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": "sdkwork-order-app-sdk has no kotlin/java output"
+        },
+        "harmony": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/order-app-sdk",
+          "sdkPath": "../sdkwork-order/sdks/sdkwork-order-app-sdk/sdkwork-order-app-sdk-typescript",
+          "reason": null
+        },
+        "flutter": {
+          "supported": false,
+          "mode": "unsupported-language",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": "sdkwork-order-app-sdk has no flutter/dart output"
+        },
+        "mini-program": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/order-app-sdk",
+          "sdkPath": "../sdkwork-order/sdks/sdkwork-order-app-sdk/sdkwork-order-app-sdk-typescript",
+          "reason": null
+        }
+      }
+    },
+    {
+      "id": "drive",
+      "title": "Drive & Upload",
+      "category": "content",
+      "repo": "sdkwork-drive",
+      "kind": "sdk",
+      "sdkFamily": "sdkwork-drive-app-sdk",
+      "permissionModuleId": "drive",
+      "config": {
+        "uploadProfile": "default",
+        "maxInlineUploadBytes": 10485760
+      },
+      "permissions": [],
+      "architectures": {
+        "pc": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/drive-app-sdk",
+          "sdkPath": "../sdkwork-drive/sdks/sdkwork-drive-app-sdk/sdkwork-drive-app-sdk-typescript",
+          "reason": null
+        },
+        "h5": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/drive-app-sdk",
+          "sdkPath": "../sdkwork-drive/sdks/sdkwork-drive-app-sdk/sdkwork-drive-app-sdk-typescript",
+          "reason": null
+        },
+        "pad": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/drive-app-sdk",
+          "sdkPath": "../sdkwork-drive/sdks/sdkwork-drive-app-sdk/sdkwork-drive-app-sdk-typescript",
+          "reason": null
+        },
+        "ios": {
+          "supported": false,
+          "mode": "unsupported-language",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": "sdkwork-drive-app-sdk has no swift output"
+        },
+        "android": {
+          "supported": true,
+          "mode": "linked",
+          "language": "java",
+          "packageName": "com.sdkwork:sdkwork-drive-app-sdk-generated",
+          "sdkPath": "../sdkwork-drive/sdks/sdkwork-drive-app-sdk/sdkwork-drive-app-sdk-java",
+          "reason": null
+        },
+        "harmony": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/drive-app-sdk",
+          "sdkPath": "../sdkwork-drive/sdks/sdkwork-drive-app-sdk/sdkwork-drive-app-sdk-typescript",
+          "reason": null
+        },
+        "flutter": {
+          "supported": false,
+          "mode": "declared",
+          "language": "flutter",
+          "packageName": "sdkwork-drive-app-sdk-generated",
+          "sdkPath": "../sdkwork-drive/sdks/sdkwork-drive-app-sdk/sdkwork-drive-app-sdk-flutter",
+          "reason": "Flutter SDK package is missing pubspec.yaml"
+        },
+        "mini-program": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/drive-app-sdk",
+          "sdkPath": "../sdkwork-drive/sdks/sdkwork-drive-app-sdk/sdkwork-drive-app-sdk-typescript",
+          "reason": null
+        }
+      }
+    },
+    {
+      "id": "payment",
+      "title": "Payment",
+      "category": "commerce",
+      "repo": "sdkwork-payment",
+      "kind": "sdk",
+      "sdkFamily": "sdkwork-payment-app-sdk",
+      "permissionModuleId": "payment",
+      "config": {
+        "channels": [
+          "wechat",
+          "alipay"
+        ]
+      },
+      "permissions": [],
+      "architectures": {
+        "pc": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/payment-app-sdk",
+          "sdkPath": "../sdkwork-payment/sdks/sdkwork-payment-app-sdk/sdkwork-payment-app-sdk-typescript",
+          "reason": null
+        },
+        "h5": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/payment-app-sdk",
+          "sdkPath": "../sdkwork-payment/sdks/sdkwork-payment-app-sdk/sdkwork-payment-app-sdk-typescript",
+          "reason": null
+        },
+        "pad": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/payment-app-sdk",
+          "sdkPath": "../sdkwork-payment/sdks/sdkwork-payment-app-sdk/sdkwork-payment-app-sdk-typescript",
+          "reason": null
+        },
+        "ios": {
+          "supported": false,
+          "mode": "unsupported-language",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": "sdkwork-payment-app-sdk has no swift output"
+        },
+        "android": {
+          "supported": false,
+          "mode": "unsupported-language",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": "sdkwork-payment-app-sdk has no kotlin/java output"
+        },
+        "harmony": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/payment-app-sdk",
+          "sdkPath": "../sdkwork-payment/sdks/sdkwork-payment-app-sdk/sdkwork-payment-app-sdk-typescript",
+          "reason": null
+        },
+        "flutter": {
+          "supported": false,
+          "mode": "unsupported-language",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": "sdkwork-payment-app-sdk has no flutter/dart output"
+        },
+        "mini-program": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/payment-app-sdk",
+          "sdkPath": "../sdkwork-payment/sdks/sdkwork-payment-app-sdk/sdkwork-payment-app-sdk-typescript",
+          "reason": null
+        }
+      }
+    },
+    {
+      "id": "comments",
+      "title": "Comments",
+      "category": "content",
+      "repo": "sdkwork-comments",
+      "kind": "sdk",
+      "sdkFamily": "sdkwork-comments-app-sdk",
+      "permissionModuleId": "comments",
+      "config": {
+        "threading": true,
+        "pageSize": 20
+      },
+      "permissions": [],
+      "architectures": {
+        "pc": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/comments-app-sdk",
+          "sdkPath": "../sdkwork-comments/sdks/sdkwork-comments-app-sdk/sdkwork-comments-app-sdk-typescript",
+          "reason": null
+        },
+        "h5": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/comments-app-sdk",
+          "sdkPath": "../sdkwork-comments/sdks/sdkwork-comments-app-sdk/sdkwork-comments-app-sdk-typescript",
+          "reason": null
+        },
+        "pad": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/comments-app-sdk",
+          "sdkPath": "../sdkwork-comments/sdks/sdkwork-comments-app-sdk/sdkwork-comments-app-sdk-typescript",
+          "reason": null
+        },
+        "ios": {
+          "supported": false,
+          "mode": "unsupported-language",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": "sdkwork-comments-app-sdk has no swift output"
+        },
+        "android": {
+          "supported": false,
+          "mode": "unsupported-language",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": "sdkwork-comments-app-sdk has no kotlin/java output"
+        },
+        "harmony": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/comments-app-sdk",
+          "sdkPath": "../sdkwork-comments/sdks/sdkwork-comments-app-sdk/sdkwork-comments-app-sdk-typescript",
+          "reason": null
+        },
+        "flutter": {
+          "supported": false,
+          "mode": "unsupported-language",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": "sdkwork-comments-app-sdk has no flutter/dart output"
+        },
+        "mini-program": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/comments-app-sdk",
+          "sdkPath": "../sdkwork-comments/sdks/sdkwork-comments-app-sdk/sdkwork-comments-app-sdk-typescript",
+          "reason": null
+        }
+      }
+    },
+    {
+      "id": "messaging",
+      "title": "Messaging",
+      "category": "communication",
+      "repo": "sdkwork-messaging",
+      "kind": "sdk",
+      "sdkFamily": "sdkwork-messaging-app-sdk",
+      "permissionModuleId": "messaging",
+      "config": {
+        "channels": [
+          "in-app",
+          "push"
+        ]
+      },
+      "permissions": [],
+      "architectures": {
+        "pc": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/messaging-app-sdk",
+          "sdkPath": "../sdkwork-messaging/sdks/sdkwork-messaging-app-sdk/sdkwork-messaging-app-sdk-typescript",
+          "reason": null
+        },
+        "h5": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/messaging-app-sdk",
+          "sdkPath": "../sdkwork-messaging/sdks/sdkwork-messaging-app-sdk/sdkwork-messaging-app-sdk-typescript",
+          "reason": null
+        },
+        "pad": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/messaging-app-sdk",
+          "sdkPath": "../sdkwork-messaging/sdks/sdkwork-messaging-app-sdk/sdkwork-messaging-app-sdk-typescript",
+          "reason": null
+        },
+        "ios": {
+          "supported": false,
+          "mode": "unsupported-language",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": "sdkwork-messaging-app-sdk has no swift output"
+        },
+        "android": {
+          "supported": false,
+          "mode": "unsupported-language",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": "sdkwork-messaging-app-sdk has no kotlin/java output"
+        },
+        "harmony": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/messaging-app-sdk",
+          "sdkPath": "../sdkwork-messaging/sdks/sdkwork-messaging-app-sdk/sdkwork-messaging-app-sdk-typescript",
+          "reason": null
+        },
+        "flutter": {
+          "supported": false,
+          "mode": "unsupported-language",
+          "language": null,
+          "packageName": null,
+          "sdkPath": null,
+          "reason": "sdkwork-messaging-app-sdk has no flutter/dart output"
+        },
+        "mini-program": {
+          "supported": true,
+          "mode": "linked",
+          "language": "typescript",
+          "packageName": "@sdkwork/messaging-app-sdk",
+          "sdkPath": "../sdkwork-messaging/sdks/sdkwork-messaging-app-sdk/sdkwork-messaging-app-sdk-typescript",
+          "reason": null
+        }
+      }
+    }
+  ]
+}
