@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "kind": "sdkwork.scaffold.instance",
+  "generator": "sdkwork-scaffold",
+  "generatorVersion": "1.0.0",
+  "generatedAt": "2026-11-03T14:28:32.317Z",
+  "application": {
+    "code": "recruitment",
+    "name": "SDKWork Recruitment",
+    "owner": "sdkwork-platform",
+    "domain": "recruitment",
+    "appType": "APP_REACT",
+    "surfaces": [
+      "pc",
+      "h5"
+    ]
+  }
+}
