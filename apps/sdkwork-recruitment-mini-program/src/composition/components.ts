@@ -38,7 +38,26 @@ export const integratedComponents: readonly IntegratedComponent[] = [
     "config": {
       "loginMode": "embedded",
       "sessionPersistence": "secure-storage",
-      "refreshSession": true
+      "refreshSession": true,
+      "socialLogin": {
+        "enabledProviders": [
+          "apple",
+          "google",
+          "meta",
+          "github",
+          "x",
+          "wechat"
+        ],
+        "providerLabels": {
+          "apple": "Apple",
+          "google": "Google",
+          "meta": "Meta",
+          "github": "GitHub",
+          "x": "X",
+          "wechat": "WeChat"
+        },
+        "redirectUri": "sdkwork://oauth/callback"
+      }
     }
   },
   {

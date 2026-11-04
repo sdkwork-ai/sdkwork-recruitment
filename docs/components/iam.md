@@ -27,7 +27,26 @@ Login, session, current user, tenant/organization context, token lifecycle, and 
 {
   "loginMode": "embedded",
   "sessionPersistence": "secure-storage",
-  "refreshSession": true
+  "refreshSession": true,
+  "socialLogin": {
+    "enabledProviders": [
+      "apple",
+      "google",
+      "meta",
+      "github",
+      "x",
+      "wechat"
+    ],
+    "providerLabels": {
+      "apple": "Apple",
+      "google": "Google",
+      "meta": "Meta",
+      "github": "GitHub",
+      "x": "X",
+      "wechat": "WeChat"
+    },
+    "redirectUri": "sdkwork://oauth/callback"
+  }
 }
 ```
 
