@@ -47,21 +47,41 @@
       ]
     },
     {
+      "id": "runtime",
+      "title": "Application runtime",
+      "version": "1.0.0",
+      "category": "platform",
+      "surfaces": [
+        "web"
+      ],
+      "contract": {
+        "environment": "src/appbase/runtime.ts",
+        "errorBoundary": "src/appbase/AppErrorBoundary.tsx",
+        "bootstrap": "src/main.tsx"
+      }
+    },
+    {
       "id": "me",
       "title": "My account",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "category": "identity",
       "requires": [
         "iam"
       ],
       "selected": true,
       "contract": {
+        "login": "auth.sessions.create",
+        "refresh": "auth.sessions.refresh",
         "session": "auth.sessions.current",
         "profile": "iam.users.current",
-        "signOut": "auth.sessions.current.delete"
+        "signOut": "auth.sessions.current.delete",
+        "organizationSelection": "auth.sessions.organizationSelection",
+        "loginContextSelection": "auth.sessions.loginContextSelection"
       },
       "projections": {
         "web": "src/account/iam-account.ts",
+        "store": "src/account/account-store.ts",
+        "hook": "src/account/use-iam-account.ts",
         "mobile": "Overview / Surfaces / Components / Me"
       }
     }

@@ -3,7 +3,7 @@
 Status: draft
 Owner: sdkwork-platform
 Application: recruitment
-Updated: 2026-11-03
+Updated: 2026-11-04
 Specs: REQUIREMENTS_SPEC.md, DOCUMENTATION_SPEC.md
 
 ## Document Map
