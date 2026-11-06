@@ -15,7 +15,11 @@
       "containerImage": "sdkwork/recruitment"
     }
   },
-  "backend": {},
+  "backend": {
+    "appId": "sdkwork-recruitment",
+    "tenantId": "100001",
+    "organizationId": "0"
+  },
   "runtime": {
     "family": "web",
     "framework": "react",
