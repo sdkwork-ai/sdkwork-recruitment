@@ -66,3 +66,12 @@ Thumbs.db
 *.sqlite
 *.sqlite3
 *.db
+
+# ---- auto-audited: local artifacts that must never be committed ----
+tmp/
+temp/
+*.tmp
+*.temp
+.cache/
+.turbo/
+.next/
