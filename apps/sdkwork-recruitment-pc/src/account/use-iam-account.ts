@@ -100,10 +100,11 @@ export function useIamAccount(): UseIamAccount {
   const signOut = useCallback(async () => {
     if (!service) return;
     await service.signOut();
-    const next: IamAccountSnapshot = { status: 'anonymous' };
     setSelection(null);
-    setSnapshot(next);
-    store.publish(next);
+    setSnapshot({ status: 'anonymous' });
+    // Removes the persisted snapshot (which carries profile PII) instead of
+    // writing another anonymous envelope over it.
+    store.clear();
   }, []);
 
   return {

@@ -4,13 +4,60 @@ import type { IamAccountSnapshot } from './iam-account';
 export interface IamAccountEnvelope {
   readonly snapshot: IamAccountSnapshot;
   readonly at: number;
+  /**
+   * Identity that produced the snapshot. A received envelope is only emitted
+   * when it matches the session already current in this tab, so one account's
+   * profile can never overwrite another account's UI through storage or a
+   * BroadcastChannel.
+   */
+  readonly userId?: string;
+  readonly tenantId?: string;
 }
 
-const STORAGE_KEY = 'sdkwork.iam.account';
+/** Account identity carried by an authenticated session. */
+export interface IamAccountIdentity {
+  readonly userId: string;
+  readonly tenantId: string;
+}
+
+export const IAM_ACCOUNT_STORAGE_KEY = 'sdkwork.iam.account';
+
+function normalizedString(value: unknown): string {
+  return typeof value === 'string' ? value.trim() : '';
+}
+
+/**
+ * Read the identity of an authenticated snapshot.
+ * @param snapshot - current or received account snapshot.
+ * @returns the tenant/user pair, or null for anonymous/unavailable/partial ones.
+ */
+export function readIamAccountIdentity(
+  snapshot: IamAccountSnapshot,
+): IamAccountIdentity | null {
+  if (snapshot.status !== 'authenticated') return null;
+  const userId = normalizedString(snapshot.profile.id);
+  const tenantId = normalizedString(snapshot.profile.tenantId);
+  return userId && tenantId ? { userId, tenantId } : null;
+}
+
+function readEnvelopeIdentity(envelope: IamAccountEnvelope): IamAccountIdentity | null {
+  const userId = normalizedString(envelope.userId);
+  const tenantId = normalizedString(envelope.tenantId);
+  return userId && tenantId ? { userId, tenantId } : null;
+}
+
+function sameIdentity(
+  left: IamAccountIdentity,
+  right: IamAccountIdentity,
+): boolean {
+  return left.userId === right.userId && left.tenantId === right.tenantId;
+}
 
 export class IamAccountStore {
   private readonly listeners = new Set<(snapshot: IamAccountSnapshot) => void>();
   private readonly channel: BroadcastChannel | null = null;
+  /** Identity of the session this tab has published; null while signed out. */
+  private currentIdentity: IamAccountIdentity | null = null;
 
   constructor(channelName = 'sdkwork-iam-account') {
     if (typeof window === 'undefined') return;
@@ -29,14 +76,37 @@ export class IamAccountStore {
   }
 
   publish(snapshot: IamAccountSnapshot): void {
+    const previousIdentity = this.currentIdentity;
+    const identity = readIamAccountIdentity(snapshot);
+    this.currentIdentity = identity;
     for (const listener of this.listeners) listener(snapshot);
-    const envelope: IamAccountEnvelope = { snapshot, at: Date.now() };
+    // A sign-out envelope still carries the identity that ended, so peer tabs
+    // can prove it belongs to their own session before clearing it.
+    const envelopeIdentity = identity ?? previousIdentity;
+    const envelope: IamAccountEnvelope = {
+      snapshot,
+      at: Date.now(),
+      ...(envelopeIdentity
+        ? { userId: envelopeIdentity.userId, tenantId: envelopeIdentity.tenantId }
+        : {}),
+    };
     this.channel?.postMessage(envelope);
     try {
-      window.localStorage.setItem(STORAGE_KEY, JSON.stringify(envelope));
+      if (identity !== null) {
+        window.localStorage.setItem(IAM_ACCOUNT_STORAGE_KEY, JSON.stringify(envelope));
+      } else {
+        // The persisted snapshot carries profile PII; a signed-out or
+        // unavailable session must not leave it behind for the next account.
+        window.localStorage.removeItem(IAM_ACCOUNT_STORAGE_KEY);
+      }
     } catch {
       // Storage can be unavailable in private or restricted contexts.
     }
+  }
+
+  /** Clear the local account snapshot and notify listeners. */
+  clear(): void {
+    this.publish({ status: 'anonymous' });
   }
 
   dispose(): void {
@@ -49,18 +119,30 @@ export class IamAccountStore {
   }
 
   private readonly handleBroadcast = (event: MessageEvent<IamAccountEnvelope>): void => {
-    if (event.data && event.data.snapshot) this.emit(event.data.snapshot);
+    this.applyEnvelope(event.data);
   };
 
   private readonly handleStorage = (event: StorageEvent): void => {
-    if (event.key !== STORAGE_KEY || !event.newValue) return;
+    if (event.key !== IAM_ACCOUNT_STORAGE_KEY || !event.newValue) return;
     try {
-      const envelope = JSON.parse(event.newValue) as IamAccountEnvelope;
-      if (envelope && envelope.snapshot) this.emit(envelope.snapshot);
+      this.applyEnvelope(JSON.parse(event.newValue) as IamAccountEnvelope);
     } catch {
       // Ignore malformed cross-tab payloads.
     }
   };
+
+  private applyEnvelope(envelope: IamAccountEnvelope): void {
+    if (!envelope || typeof envelope !== 'object' || !envelope.snapshot) return;
+    const identity = readEnvelopeIdentity(envelope);
+    const current = this.currentIdentity;
+    // Fail closed: an envelope without identity, or one produced by a
+    // different account, must not emit into this tab's current session.
+    if (identity === null || current === null || !sameIdentity(identity, current)) {
+      return;
+    }
+    this.currentIdentity = readIamAccountIdentity(envelope.snapshot);
+    this.emit(envelope.snapshot);
+  }
 
   private emit(snapshot: IamAccountSnapshot): void {
     for (const listener of this.listeners) listener(snapshot);
